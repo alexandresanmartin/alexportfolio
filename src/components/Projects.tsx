@@ -1,0 +1,90 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+
+const Projects = () => {
+  const projects = [
+    {
+      id: "fendt-vario",
+      title: "Fendt Vario Tractor – Mechanical Systems Design",
+      description: [
+        "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
+        "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
+        "Ensured efficiency, durability, and adaptability across varied agricultural terrains",
+        "Evaluated costing strategies and outsourcing options to balance technical performance with market feasibility"
+      ],
+      skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
+      category: "Mechanical Systems / Industrial Machinery"
+    },
+    {
+      id: "hydrogen-car",
+      title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
+      description: [
+        "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
+        "Redesigned fuel delivery and engine systems to operate with hydrogen",
+        "Implemented safety adaptations for storage and handling of hydrogen",
+        "Ensured minimal structural modifications while maintaining performance"
+      ],
+      skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
+      category: "Sustainable Mobility / Automotive Engineering"
+    },
+    {
+      id: "hvac-system",
+      title: "Sustainable HVAC Design",
+      description: "Created energy-efficient HVAC solution reducing power consumption by 30% while maintaining optimal climate control.",
+      skills: ["Energy Analysis", "HVAC", "Sustainability", "AutoCAD"],
+      category: "Energy Systems"
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-20 px-4 bg-muted/50">
+      <div className="container max-w-6xl">
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A selection of engineering projects demonstrating problem-solving abilities and technical expertise
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <Link key={index} to={`/project/${project.id}`}>
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+              <CardHeader>
+                <Badge className="w-fit mb-2">{project.category}</Badge>
+                <CardTitle className="text-xl">{project.title}</CardTitle>
+                <CardDescription className="text-base space-y-2">
+                  {Array.isArray(project.description) ? (
+                    <ul className="space-y-2">
+                      {project.description.map((item, idx) => (
+                        <li key={idx} className="flex gap-2">
+                          <span>•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    project.description
+                  )}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill, idx) => (
+                    <Badge key={idx} variant="secondary">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
