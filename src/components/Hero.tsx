@@ -37,7 +37,7 @@ const Hero = () => {
               <span className="px-4 py-2 rounded-full bg-card border border-border">Industrial Applications</span>
             </div>
             <p className="text-lg md:text-xl text-foreground font-medium pt-4">
-              Alexandre San Martin Goyanes
+              Alexandre Sanmartin Goyanes
             </p>
           </div>
         </div>
