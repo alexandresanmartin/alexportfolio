@@ -17,8 +17,8 @@ const Hero = () => {
         <div className="space-y-6 animate-fade-in">
           <div className="inline-block">
             <div className="relative">
-              <h1 className="text-6xl md:text-8xl font-black text-foreground tracking-tight leading-none">
-                <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse">
+              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-none">
+                <span className="block">
                   MECHANICAL
                 </span>
                 <span className="block mt-2">ENGINEERING</span>
