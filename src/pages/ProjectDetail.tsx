@@ -148,8 +148,6 @@ const ProjectDetail = () => {
                   <a
                     key={idx}
                     href={doc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="block p-4 border rounded-lg hover:bg-accent transition-colors"
                   >
                     <span className="font-medium">{doc.name}</span>
