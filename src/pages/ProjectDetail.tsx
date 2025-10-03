@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import PDFViewer from "@/components/PDFViewer";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -145,16 +146,11 @@ const ProjectDetail = () => {
               <h2 className="text-2xl font-semibold">Documents & Resources</h2>
               <div className="space-y-2">
                 {project.documents.map((doc, idx) => (
-                  <a
+                  <PDFViewer
                     key={idx}
-                    href={doc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
-                    className="block p-4 border rounded-lg hover:bg-accent transition-colors"
-                  >
-                    <span className="font-medium">{doc.name}</span>
-                  </a>
+                    name={doc.name}
+                    url={doc.url}
+                  />
                 ))}
               </div>
             </div>
