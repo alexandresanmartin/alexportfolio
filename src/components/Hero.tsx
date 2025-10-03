@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="space-y-6 animate-fade-in">
           <div className="inline-block">
             <div className="relative">
-              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-none">
+              <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-none">
                 <span className="block">
                   MECHANICAL
                 </span>
@@ -36,6 +36,9 @@ const Hero = () => {
               <span className="px-4 py-2 rounded-full bg-card border border-border">Mechanical Systems</span>
               <span className="px-4 py-2 rounded-full bg-card border border-border">Industrial Applications</span>
             </div>
+            <p className="text-lg md:text-xl text-foreground font-medium pt-4">
+              Alexandre San Martin Goyanes
+            </p>
           </div>
         </div>
 
