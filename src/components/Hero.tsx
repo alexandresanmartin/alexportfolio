@@ -42,7 +42,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
           <Button 
             size="lg" 
             onClick={() => scrollToSection('projects')}
