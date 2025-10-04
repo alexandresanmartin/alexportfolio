@@ -70,7 +70,10 @@ const ProjectDetail = () => {
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
       detailedInfo: "Research project done with the IAM Institute of KIT",
       images: [],
-      documents: []
+      documents: [
+        { name: "Research Paper", url: "/Research_Paper.pdf" },
+        { name: "Research Question", url: "/Research_Question.pdf" }
+      ]
     }
   };
 
