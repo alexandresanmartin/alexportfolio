@@ -130,8 +130,7 @@ const ProjectDetail = () => {
 
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">Detailed Information</h2>
-            <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
-            <p className="text-sm text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
+            <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
           </div>
 
           {project.images.length > 0 && (
