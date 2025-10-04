@@ -68,7 +68,7 @@ const ProjectDetail = () => {
         "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long-term high-temperature performance"
       ],
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
-      detailedInfo: "",
+      detailedInfo: "Research project done with the IAM Institute of KIT",
       images: [],
       documents: []
     }
@@ -133,7 +133,10 @@ const ProjectDetail = () => {
 
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">Detailed Information</h2>
-            <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
+            <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
+            {projectId === "fendt-vario" && (
+              <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
+            )}
           </div>
 
           {project.images.length > 0 && (
