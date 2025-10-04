@@ -59,7 +59,7 @@ const ProjectDetail = () => {
       documents: []
     },
     "hvac-system": {
-      title: "Research in Niobium Based alloys",
+      title: "Research Paper in Niobium Based Alloys",
       category: "Research",
       description: [
         "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",

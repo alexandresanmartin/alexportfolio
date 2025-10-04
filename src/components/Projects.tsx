@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       id: "hvac-system",
-      title: "Research in Niobium Based alloys",
+      title: "Research Paper in Niobium Based Alloys",
       description: [
         "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
         "Evaluated coating methods (aluminide, silicide, dual-layer systems) to improve oxidation resistance",
