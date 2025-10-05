@@ -21,7 +21,7 @@ const Skills = () => {
     {
       icon: Boxes,
       title: "Core Competencies",
-      skills: ["Thermodynamics", "Fluid Mechanics", "Material Science", "Mechanical Systems", "Project Management"]
+      skills: ["Thermodynamics", "Fluid Mechanics", "Material Science", "Mechanical Systems", "Project Management", "Product Design and Development"]
     }
   ];
 
