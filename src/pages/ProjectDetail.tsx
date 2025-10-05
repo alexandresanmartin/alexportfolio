@@ -54,7 +54,7 @@ const ProjectDetail = () => {
         "Ensured minimal structural modifications while maintaining performance"
       ],
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
-      detailedInfo: "Add more detailed information about this project here. You can include technical specifications, challenges faced, solutions implemented, and results achieved.",
+      detailedInfo: "",
       images: [],
       documents: []
     },
