@@ -141,11 +141,14 @@ const ProjectDetail = () => {
               <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
             )}
             {projectId === "hydrogen-car" && (
-              <p className="text-lg text-muted-foreground">
-                <a href="https://www.ka-raceing.de/hydrogen" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  https://www.ka-raceing.de/hydrogen
-                </a>
-              </p>
+              <>
+                <p className="text-lg text-muted-foreground">More Information on Demand. Not publicly available due to Privacy Agreements.</p>
+                <p className="text-lg text-muted-foreground">
+                  <a href="https://www.ka-raceing.de/hydrogen" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    https://www.ka-raceing.de/hydrogen
+                  </a>
+                </p>
+              </>
             )}
           </div>
 
