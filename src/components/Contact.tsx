@@ -51,7 +51,7 @@ const Contact = () => {
             </div>
 
             <div className="text-center text-sm text-muted-foreground pt-4">
-              <p>Available for internships starting Summer 2025</p>
+              <p>Available for internships starting Summer 2026</p>
             </div>
           </CardContent>
         </Card>
