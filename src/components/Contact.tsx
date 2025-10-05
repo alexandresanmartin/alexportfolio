@@ -17,7 +17,7 @@ const Contact = () => {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Let's Connect</CardTitle>
             <CardDescription className="text-base">
-              I'm actively seeking mechanical engineering internship opportunities in California
+              Actively seeking Mechanical Engineering internship opportunities in Aerospace and Automotive Industry
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
