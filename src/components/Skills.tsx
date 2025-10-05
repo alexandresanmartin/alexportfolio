@@ -15,8 +15,8 @@ const Skills = () => {
     },
     {
       icon: Cpu,
-      title: "Manufacturing",
-      skills: ["CNC Programming", "3D Printing", "Lean Manufacturing", "Quality Control", "GD&T"]
+      title: "Operations Management",
+      skills: ["Contrasting Information", "Lean Manufacturing", "Process Optimization", "Quality Control"]
     },
     {
       icon: Boxes,
