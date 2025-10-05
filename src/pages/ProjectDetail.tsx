@@ -140,6 +140,9 @@ const ProjectDetail = () => {
             {projectId === "fendt-vario" && (
               <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
             )}
+            {projectId === "hydrogen-car" && (
+              <p className="text-lg text-muted-foreground">More Information on Demand. Not publicly available due to Privacy Agreements.</p>
+            )}
           </div>
 
           {project.images.length > 0 && (
