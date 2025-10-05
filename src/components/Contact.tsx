@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">Get In Touch</h2>
           <p className="text-lg text-muted-foreground">
-            Interested in discussing internship opportunities or collaboration
+            Interested in discussing internship opportunities or Master Thesis collaboration
           </p>
         </div>
 
