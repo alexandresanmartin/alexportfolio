@@ -23,7 +23,7 @@ const Contact = () => {
           <CardContent className="space-y-6">
             <div className="flex items-center justify-center gap-2 text-muted-foreground">
               <MapPin className="h-5 w-5" />
-              <span>California, USA</span>
+              <span>Zürich, Switzerland</span>
             </div>
 
             <div className="space-y-3">
