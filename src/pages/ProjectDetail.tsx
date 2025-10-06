@@ -74,6 +74,30 @@ const ProjectDetail = () => {
         { name: "Research Paper", url: "/Research_Paper.pdf" },
         { name: "Research Question", url: "/Research_Question.pdf" }
       ]
+    },
+    "modular-drone": {
+      title: "Lightweight Modular Drone",
+      category: "Upcoming Project",
+      description: [
+        "Designing a lightweight modular drone system",
+        "Project in development phase"
+      ],
+      skills: ["Drone Design", "Lightweight Structures", "Modular Systems"],
+      detailedInfo: "This project is currently in the planning and development phase. More details will be available soon.",
+      images: [],
+      documents: []
+    },
+    "drift-kart": {
+      title: "Drift Kart",
+      category: "Upcoming Project",
+      description: [
+        "Building a custom drift kart",
+        "Project in development phase"
+      ],
+      skills: ["Vehicle Dynamics", "Chassis Design", "Performance Engineering"],
+      detailedInfo: "This project is currently in the planning and development phase. More details will be available soon.",
+      images: [],
+      documents: []
     }
   };
 

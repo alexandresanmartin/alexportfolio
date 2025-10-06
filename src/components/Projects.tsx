@@ -109,16 +109,18 @@ const Projects = () => {
           
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {futureProjects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <Badge className="mb-2">{project.category}</Badge>
-                      <CardTitle className="text-lg">{project.title}</CardTitle>
+              <Link key={index} to={`/project/${project.id}`}>
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <Badge className="mb-2">{project.category}</Badge>
+                        <CardTitle className="text-lg">{project.title}</CardTitle>
+                      </div>
                     </div>
-                  </div>
-                </CardHeader>
-              </Card>
+                  </CardHeader>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
