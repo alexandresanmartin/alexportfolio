@@ -42,6 +42,19 @@ const Projects = () => {
     }
   ];
 
+  const futureProjects = [
+    {
+      id: "modular-drone",
+      title: "Lightweight Modular Drone",
+      category: "Upcoming Project"
+    },
+    {
+      id: "drift-kart",
+      title: "Drift Kart",
+      category: "Upcoming Project"
+    }
+  ];
+
   return (
     <section id="projects" className="py-20 px-4 bg-muted/50">
       <div className="container max-w-6xl">
@@ -52,7 +65,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {projects.map((project, index) => (
             <Link key={index} to={`/project/${project.id}`}>
               <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
@@ -86,6 +99,28 @@ const Projects = () => {
             </Card>
             </Link>
           ))}
+        </div>
+
+        <div className="space-y-6">
+          <div className="text-center space-y-2">
+            <h3 className="text-2xl md:text-3xl font-bold">Future Projects</h3>
+            <p className="text-muted-foreground">Upcoming engineering ventures</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {futureProjects.map((project, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <Badge className="mb-2">{project.category}</Badge>
+                      <CardTitle className="text-lg">{project.title}</CardTitle>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
