@@ -95,7 +95,7 @@ const ProjectDetail = () => {
         "Project in development phase"
       ],
       skills: ["Vehicle Dynamics", "Chassis Design", "Performance Engineering"],
-      detailedInfo: "This project is currently in the planning and development phase. More details will be available soon.",
+      detailedInfo: "Planning on using an FIA Go Kart Frame to repurpose it into a For-Fun project",
       images: [],
       documents: []
     }
