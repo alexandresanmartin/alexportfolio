@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import PDFViewer from "@/components/PDFViewer";
+import kartFrame from "@/assets/kart-frame.png";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -15,6 +16,7 @@ const ProjectDetail = () => {
     skills: string[];
     detailedInfo: string;
     images: string[];
+    imageDescriptions?: string[];
     documents: { name: string; url: string }[];
   }> = {
     "fendt-vario": {
@@ -96,7 +98,8 @@ const ProjectDetail = () => {
       ],
       skills: ["Vehicle Dynamics", "Chassis Design", "Performance Engineering"],
       detailedInfo: "Planning on using an FIA Go Kart Frame to repurpose it into a For-Fun project",
-      images: [],
+      images: [kartFrame],
+      imageDescriptions: ["Frame/Chassis of an FIA Regulated Go-Kart. Source: User ggiraldo in SIMSCALE"],
       documents: []
     }
   };
@@ -129,38 +132,39 @@ const ProjectDetail = () => {
           </Button>
         </Link>
 
-        <div className="space-y-8">
-          <div>
-            <Badge className="mb-4">{project.category}</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Overview</h2>
-            <ul className="space-y-3">
-              {project.description.map((item, idx) => (
-                <li key={idx} className="flex gap-3 text-lg">
-                  <span className="text-primary">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Skills & Technologies</h2>
-            <div className="flex flex-wrap gap-2">
-              {project.skills.map((skill, idx) => (
-                <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
-                  {skill}
-                </Badge>
-              ))}
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-8">
+            <div>
+              <Badge className="mb-4">{project.category}</Badge>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
             </div>
-          </div>
 
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Detailed Information</h2>
-            <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold">Overview</h2>
+              <ul className="space-y-3">
+                {project.description.map((item, idx) => (
+                  <li key={idx} className="flex gap-3 text-lg">
+                    <span className="text-primary">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold">Skills & Technologies</h2>
+              <div className="flex flex-wrap gap-2">
+                {project.skills.map((skill, idx) => (
+                  <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold">Detailed Information</h2>
+              <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
             {projectId === "fendt-vario" && (
               <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
             )}
@@ -174,25 +178,9 @@ const ProjectDetail = () => {
                 </p>
               </>
             )}
-          </div>
-
-          {project.images.length > 0 && (
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Project Images</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {project.images.map((image, idx) => (
-                  <img
-                    key={idx}
-                    src={image}
-                    alt={`${project.title} - Image ${idx + 1}`}
-                    className="rounded-lg border shadow-sm w-full"
-                  />
-                ))}
-              </div>
             </div>
-          )}
 
-          {project.documents.length > 0 && (
+            {project.documents.length > 0 && (
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Documents & Resources</h2>
               <div className="space-y-2">
@@ -202,6 +190,28 @@ const ProjectDetail = () => {
                     name={doc.name}
                     url={doc.url}
                   />
+                ))}
+              </div>
+            </div>
+            )}
+          </div>
+
+          {project.images.length > 0 && (
+            <div className="lg:col-span-1">
+              <div className="sticky top-8 space-y-4">
+                {project.images.map((image, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <img
+                      src={image}
+                      alt={`${project.title} - Image ${idx + 1}`}
+                      className="rounded-lg border shadow-sm w-full"
+                    />
+                    {project.imageDescriptions && project.imageDescriptions[idx] && (
+                      <p className="text-sm text-muted-foreground italic">
+                        {project.imageDescriptions[idx]}
+                      </p>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
