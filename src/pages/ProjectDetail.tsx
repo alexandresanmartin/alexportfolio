@@ -132,8 +132,8 @@ const ProjectDetail = () => {
           </Button>
         </Link>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
+        <div className="grid lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-3 space-y-8">
             <div>
               <Badge className="mb-4">{project.category}</Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
@@ -197,10 +197,10 @@ const ProjectDetail = () => {
           </div>
 
           {project.images.length > 0 && (
-            <div className="lg:col-span-1">
-              <div className="sticky top-8 space-y-4 flex flex-col items-center">
+            <div className="lg:col-span-2">
+              <div className="sticky top-8 space-y-4 flex flex-col items-center justify-center">
                 {project.images.map((image, idx) => (
-                  <div key={idx} className="space-y-2 w-full max-w-md">
+                  <div key={idx} className="space-y-2 w-full">
                     <img
                       src={image}
                       alt={`${project.title} - Image ${idx + 1}`}
