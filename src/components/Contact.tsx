@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">Get In Touch</h2>
           <p className="text-lg text-muted-foreground">
-            Interested in discussing internship opportunities or collaboration
+            Interested in discussing internship opportunities or Master Thesis collaboration
           </p>
         </div>
 
@@ -17,13 +17,13 @@ const Contact = () => {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Let's Connect</CardTitle>
             <CardDescription className="text-base">
-              I'm actively seeking mechanical engineering internship opportunities in California
+              Actively seeking Mechanical Engineering internship opportunities in Aerospace and Automotive Industry
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center justify-center gap-2 text-muted-foreground">
               <MapPin className="h-5 w-5" />
-              <span>California, USA</span>
+              <span>Zürich, Switzerland</span>
             </div>
 
             <div className="space-y-3">
@@ -51,7 +51,7 @@ const Contact = () => {
             </div>
 
             <div className="text-center text-sm text-muted-foreground pt-4">
-              <p>Available for internships starting Summer 2025</p>
+              <p>Available for internships starting Summer 2026</p>
             </div>
           </CardContent>
         </Card>

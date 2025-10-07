@@ -32,11 +32,29 @@ const Projects = () => {
     },
     {
       id: "hvac-system",
-      title: "Sustainable HVAC Design",
-      description: "Created energy-efficient HVAC solution reducing power consumption by 30% while maintaining optimal climate control.",
-      skills: ["Energy Analysis", "HVAC", "Sustainability", "AutoCAD"],
-      category: "Energy Systems",
-      duration: "Fall Semester 2023"
+      title: "Research Paper in Niobium Based Alloys",
+      description: [
+        "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
+        "Evaluated coating methods (aluminide, silicide, dual-layer systems) to improve oxidation resistance",
+        "Compared alternative materials (tungsten, molybdenum, advanced ceramics, and composites) for superior thermal stability",
+        "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long-term high-temperature performance"
+      ],
+      skills: ["Academic Research", "Material Science", "Aerospace Industry"],
+      category: "Research",
+      duration: "4 Months"
+    }
+  ];
+
+  const futureProjects = [
+    {
+      id: "modular-drone",
+      title: "Lightweight Modular Drone",
+      category: "Upcoming Project"
+    },
+    {
+      id: "drift-kart",
+      title: "Drift Kart",
+      category: "Upcoming Project"
     }
   ];
 
@@ -50,7 +68,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {projects.map((project, index) => (
             <Link key={index} to={`/project/${project.id}`}>
               <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
@@ -85,6 +103,30 @@ const Projects = () => {
             </Card>
             </Link>
           ))}
+        </div>
+
+        <div className="space-y-6">
+          <div className="text-center space-y-2">
+            <h3 className="text-2xl md:text-3xl font-bold">Future Projects</h3>
+            <p className="text-muted-foreground">Upcoming engineering ventures</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {futureProjects.map((project, index) => (
+              <Link key={index} to={`/project/${project.id}`}>
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <Badge className="mb-2">{project.category}</Badge>
+                        <CardTitle className="text-lg">{project.title}</CardTitle>
+                      </div>
+                    </div>
+                  </CardHeader>
+                </Card>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

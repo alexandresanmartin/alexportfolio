@@ -6,22 +6,22 @@ const Skills = () => {
     {
       icon: Wrench,
       title: "CAD & Design",
-      skills: ["SolidWorks", "AutoCAD", "CATIA", "Fusion 360", "3D Modeling", "Technical Drawing"]
+      skills: ["SolidWorks", "AutoCAD", "Creo", "Fusion 360", "3D Modeling", "Technical Drawing"]
     },
     {
       icon: LineChart,
-      title: "Analysis & Simulation",
-      skills: ["ANSYS", "MATLAB", "FEA Analysis", "CFD", "Thermal Analysis", "Stress Testing"]
+      title: "Problem Solving",
+      skills: ["Critical Thinking", "Process Reiteration", "Team Work", "Independent Work"]
     },
     {
       icon: Cpu,
-      title: "Manufacturing",
-      skills: ["CNC Programming", "3D Printing", "Lean Manufacturing", "Quality Control", "GD&T"]
+      title: "Operations Management",
+      skills: ["Contrasting Information", "Lean Manufacturing", "Process Optimization", "Quality Control"]
     },
     {
       icon: Boxes,
       title: "Core Competencies",
-      skills: ["Thermodynamics", "Fluid Mechanics", "Material Science", "Mechanical Systems", "Project Management"]
+      skills: ["Thermodynamics", "Fluid Mechanics", "Material Science", "Mechanical Systems", "Project Management", "Product Design and Development"]
     }
   ];
 

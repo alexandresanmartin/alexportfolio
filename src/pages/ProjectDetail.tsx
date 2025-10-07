@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import PDFViewer from "@/components/PDFViewer";
+import kartFrame from "@/assets/kart-frame.png";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -16,6 +17,7 @@ const ProjectDetail = () => {
     skills: string[];
     detailedInfo: string;
     images: string[];
+    imageDescriptions?: string[];
     documents: { name: string; url: string }[];
   }> = {
     "fendt-vario": {
@@ -35,7 +37,15 @@ const ProjectDetail = () => {
         { name: "Task 1", url: "/Workshop_Task_MD3_WS_23_24.pdf" },
         { name: "Task 2", url: "/Workshopaufgabe_MKL4_SS24_EN_V1.pdf" },
         { name: "Variable Height Power transmitting shaft", url: "/D22_VersGetr_Konstruktion_AS.pdf" },
-        { name: "Transanxle Concept", url: "/Pablooo_Lope.pdf" }
+        { name: "Transanxle Concept", url: "/Pablooo_Lope.pdf" },
+        { name: "Bearing Selection", url: "/Bearing_Selection.pdf" },
+        { name: "Calculation Breakdown", url: "/Calculation_Breakdown.pdf" },
+        { name: "Gearbox Concept 1", url: "/Gearbox_Concept_1.pdf" },
+        { name: "Gearbox Concept 2", url: "/Gearbox_Concept_2.pdf" },
+        { name: "Cost Calculation", url: "/Cost_Calculation.pdf" },
+        { name: "Sketch", url: "/Sketch.pdf" },
+        { name: "Minimum Shaft Diameter Calculations", url: "/Minimum_Shaft_Diameter_Calculations.pdf" },
+        { name: "Technical Drawing Gearbox", url: "/Technical_Drawing_Gearbox.pdf" }
       ]
     },
     "hydrogen-car": {
@@ -49,20 +59,53 @@ const ProjectDetail = () => {
         "Ensured minimal structural modifications while maintaining performance"
       ],
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
-      detailedInfo: "Add more detailed information about this project here. You can include technical specifications, challenges faced, solutions implemented, and results achieved.",
+      detailedInfo: "",
       images: [],
       documents: []
     },
     "hvac-system": {
-      title: "Sustainable HVAC Design",
-      category: "Energy Systems",
-      duration: "Fall Semester 2023",
+      title: "Research Paper in Niobium Based Alloys",
+      category: "Research",
+      duration: "4 Months",
       description: [
-        "Created energy-efficient HVAC solution reducing power consumption by 30% while maintaining optimal climate control."
+        "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
+        "Evaluated coating methods (aluminide, silicide, dual-layer systems) to improve oxidation resistance",
+        "Compared alternative materials (tungsten, molybdenum, advanced ceramics, and composites) for superior thermal stability",
+        "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long-term high-temperature performance"
       ],
-      skills: ["Energy Analysis", "HVAC", "Sustainability", "AutoCAD"],
-      detailedInfo: "Add more detailed information about this project here. You can include technical specifications, challenges faced, solutions implemented, and results achieved.",
+      skills: ["Academic Research", "Material Science", "Aerospace Industry"],
+      detailedInfo: "Research project done with the IAM Institute of KIT",
       images: [],
+      documents: [
+        { name: "Research Paper", url: "/Research_Paper.pdf" },
+        { name: "Research Question", url: "/Research_Question.pdf" }
+      ]
+    },
+    "modular-drone": {
+      title: "Lightweight Modular Drone",
+      category: "Upcoming Project",
+      duration: "TBD",
+      description: [
+        "Designing a lightweight modular drone system",
+        "Project in development phase"
+      ],
+      skills: ["Drone Design", "Lightweight Structures", "Modular Systems"],
+      detailedInfo: "This project is currently in the planning and development phase. More details will be available soon.",
+      images: [],
+      documents: []
+    },
+    "drift-kart": {
+      title: "Drift Kart",
+      category: "Upcoming Project",
+      duration: "TBD",
+      description: [
+        "Building a custom drift kart",
+        "Project in development phase"
+      ],
+      skills: ["Vehicle Dynamics", "Chassis Design", "Performance Engineering"],
+      detailedInfo: "Planning on using an FIA Go Kart Frame to repurpose it into a For-Fun project",
+      images: [kartFrame],
+      imageDescriptions: ["Frame/Chassis of an FIA Regulated Go-Kart. Source: User ggiraldo in SIMSCALE"],
       documents: []
     }
   };
@@ -95,58 +138,56 @@ const ProjectDetail = () => {
           </Button>
         </Link>
 
-        <div className="space-y-8">
-          <div>
-            <Badge className="mb-4">{project.category}</Badge>
-            <p className="text-sm text-muted-foreground mb-4">{project.duration}</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Overview</h2>
-            <ul className="space-y-3">
-              {project.description.map((item, idx) => (
-                <li key={idx} className="flex gap-3 text-lg">
-                  <span className="text-primary">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Skills & Technologies</h2>
-            <div className="flex flex-wrap gap-2">
-              {project.skills.map((skill, idx) => (
-                <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
-                  {skill}
-                </Badge>
-              ))}
+        <div className="grid lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-3 space-y-8">
+            <div>
+              <Badge className="mb-4">{project.category}</Badge>
+              <p className="text-sm text-muted-foreground mb-4">{project.duration}</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
             </div>
-          </div>
 
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Detailed Information</h2>
-            <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
-          </div>
-
-          {project.images.length > 0 && (
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Project Images</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {project.images.map((image, idx) => (
-                  <img
-                    key={idx}
-                    src={image}
-                    alt={`${project.title} - Image ${idx + 1}`}
-                    className="rounded-lg border shadow-sm w-full"
-                  />
+              <h2 className="text-2xl font-semibold">Overview</h2>
+              <ul className="space-y-3">
+                {project.description.map((item, idx) => (
+                  <li key={idx} className="flex gap-3 text-lg">
+                    <span className="text-primary">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold">Skills & Technologies</h2>
+              <div className="flex flex-wrap gap-2">
+                {project.skills.map((skill, idx) => (
+                  <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                    {skill}
+                  </Badge>
                 ))}
               </div>
             </div>
-          )}
 
-          {project.documents.length > 0 && (
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold">Detailed Information</h2>
+              <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
+            {projectId === "fendt-vario" && (
+              <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
+            )}
+            {projectId === "hydrogen-car" && (
+              <>
+                <p className="text-lg text-muted-foreground">More Information on Demand. Not publicly available due to Privacy Agreements.</p>
+                <p className="text-lg text-muted-foreground">
+                  <a href="https://www.ka-raceing.de/hydrogen" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    https://www.ka-raceing.de/hydrogen
+                  </a>
+                </p>
+              </>
+            )}
+            </div>
+
+            {project.documents.length > 0 && (
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Documents & Resources</h2>
               <div className="space-y-2">
@@ -156,6 +197,28 @@ const ProjectDetail = () => {
                     name={doc.name}
                     url={doc.url}
                   />
+                ))}
+              </div>
+            </div>
+            )}
+          </div>
+
+          {project.images.length > 0 && (
+            <div className="lg:col-span-2">
+              <div className="sticky top-8 space-y-4 flex flex-col items-start justify-center px-6">
+                {project.images.map((image, idx) => (
+                  <div key={idx} className="space-y-2 w-full flex flex-col items-start">
+                    <img
+                      src={image}
+                      alt={`${project.title} - Image ${idx + 1}`}
+                      className="rounded-lg border shadow-sm max-w-lg"
+                    />
+                    {project.imageDescriptions && project.imageDescriptions[idx] && (
+                      <p className="text-sm text-muted-foreground italic">
+                        {project.imageDescriptions[idx]}
+                      </p>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
