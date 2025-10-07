@@ -200,7 +200,7 @@ const ProjectDetail = () => {
             <div className="lg:col-span-2">
               <div className="sticky top-8 space-y-4 flex flex-col items-center justify-center px-6">
                 {project.images.map((image, idx) => (
-                  <div key={idx} className="space-y-2 w-full flex flex-col items-center">
+                  <div key={idx} className="space-y-2 w-full flex flex-col items-start pl-12">
                     <img
                       src={image}
                       alt={`${project.title} - Image ${idx + 1}`}
