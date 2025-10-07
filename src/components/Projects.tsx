@@ -14,7 +14,8 @@ const Projects = () => {
         "Evaluated costing strategies and outsourcing options to balance technical performance with market feasibility"
       ],
       skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
-      category: "Mechanical Systems / Industrial Machinery"
+      category: "Mechanical Systems / Industrial Machinery",
+      duration: "1 Year"
     },
     {
       id: "hydrogen-car",
@@ -26,7 +27,8 @@ const Projects = () => {
         "Ensured minimal structural modifications while maintaining performance"
       ],
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
-      category: "Sustainable Mobility / Automotive Engineering"
+      category: "Sustainable Mobility / Automotive Engineering",
+      duration: "6 Months"
     },
     {
       id: "hvac-system",
@@ -38,7 +40,8 @@ const Projects = () => {
         "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long-term high-temperature performance"
       ],
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
-      category: "Research"
+      category: "Research",
+      duration: "4 Months"
     }
   ];
 
@@ -70,7 +73,12 @@ const Projects = () => {
             <Link key={index} to={`/project/${project.id}`}>
               <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
               <CardHeader>
-                <Badge className="w-fit mb-2">{project.category}</Badge>
+                <div className="flex items-center justify-between mb-2">
+                  <Badge className="w-fit">{project.category}</Badge>
+                  {project.duration && (
+                    <span className="text-sm text-muted-foreground">{project.duration}</span>
+                  )}
+                </div>
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 <CardDescription className="text-base space-y-2">
                   {Array.isArray(project.description) ? (

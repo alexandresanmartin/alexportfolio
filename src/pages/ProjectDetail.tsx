@@ -18,6 +18,7 @@ const ProjectDetail = () => {
     images: string[];
     imageDescriptions?: string[];
     documents: { name: string; url: string }[];
+    duration?: string;
   }> = {
     "fendt-vario": {
       title: "Fendt Vario Tractor – Mechanical Systems Design",
@@ -44,7 +45,8 @@ const ProjectDetail = () => {
         { name: "Sketch", url: "/Sketch.pdf" },
         { name: "Minimum Shaft Diameter Calculations", url: "/Minimum_Shaft_Diameter_Calculations.pdf" },
         { name: "Technical Drawing Gearbox", url: "/Technical_Drawing_Gearbox.pdf" }
-      ]
+      ],
+      duration: "1 Year"
     },
     "hydrogen-car": {
       title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
@@ -58,7 +60,8 @@ const ProjectDetail = () => {
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
       detailedInfo: "",
       images: [],
-      documents: []
+      documents: [],
+      duration: "6 Months"
     },
     "hvac-system": {
       title: "Research Paper in Niobium Based Alloys",
@@ -75,7 +78,8 @@ const ProjectDetail = () => {
       documents: [
         { name: "Research Paper", url: "/Research_Paper.pdf" },
         { name: "Research Question", url: "/Research_Question.pdf" }
-      ]
+      ],
+      duration: "4 Months"
     },
     "modular-drone": {
       title: "Lightweight Modular Drone",
@@ -135,7 +139,12 @@ const ProjectDetail = () => {
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-3 space-y-8">
             <div>
-              <Badge className="mb-4">{project.category}</Badge>
+              <div className="flex items-center justify-between mb-4">
+                <Badge>{project.category}</Badge>
+                {project.duration && (
+                  <span className="text-lg text-muted-foreground">{project.duration}</span>
+                )}
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
             </div>
 
