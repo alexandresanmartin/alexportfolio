@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -7,6 +7,18 @@ import kartFrame from "@/assets/kart-frame.png";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
+  const navigate = useNavigate();
+
+  const handleBackToProjects = () => {
+    navigate('/');
+    // Small delay to ensure page loads before scrolling
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   // Project data with detailed information
   const projectsData: Record<string, {
@@ -131,12 +143,10 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="container max-w-6xl py-12 px-4">
-        <Link to="/#projects">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Projects
-          </Button>
-        </Link>
+        <Button variant="ghost" className="mb-8" onClick={handleBackToProjects}>
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Projects
+        </Button>
 
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-3 space-y-8">
