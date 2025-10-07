@@ -198,13 +198,13 @@ const ProjectDetail = () => {
 
           {project.images.length > 0 && (
             <div className="lg:col-span-1">
-              <div className="sticky top-8 space-y-4">
+              <div className="sticky top-8 space-y-4 flex flex-col items-center">
                 {project.images.map((image, idx) => (
-                  <div key={idx} className="space-y-2">
+                  <div key={idx} className="space-y-2 w-full max-w-md">
                     <img
                       src={image}
                       alt={`${project.title} - Image ${idx + 1}`}
-                      className="rounded-lg border shadow-sm w-full"
+                      className="rounded-lg border shadow-sm w-full mx-auto"
                     />
                     {project.imageDescriptions && project.imageDescriptions[idx] && (
                       <p className="text-sm text-muted-foreground italic">
