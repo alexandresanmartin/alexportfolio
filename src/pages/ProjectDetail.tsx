@@ -200,11 +200,11 @@ const ProjectDetail = () => {
             <div className="lg:col-span-2">
               <div className="sticky top-8 space-y-4 flex flex-col items-center justify-center">
                 {project.images.map((image, idx) => (
-                  <div key={idx} className="space-y-2 w-full">
+                  <div key={idx} className="space-y-2 w-full flex flex-col items-center">
                     <img
                       src={image}
                       alt={`${project.title} - Image ${idx + 1}`}
-                      className="rounded-lg border shadow-sm w-full mx-auto"
+                      className="rounded-lg border shadow-sm max-w-lg"
                     />
                     {project.imageDescriptions && project.imageDescriptions[idx] && (
                       <p className="text-sm text-muted-foreground italic">
