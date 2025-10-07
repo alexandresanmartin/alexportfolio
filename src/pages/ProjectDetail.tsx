@@ -23,7 +23,7 @@ const ProjectDetail = () => {
     "fendt-vario": {
       title: "Fendt Vario Tractor – Mechanical Systems Design",
       category: "Mechanical Systems / Industrial Machinery",
-      duration: "Winter Semester 2023-24",
+      duration: "1 Year",
       description: [
         "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
         "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
@@ -51,7 +51,7 @@ const ProjectDetail = () => {
     "hydrogen-car": {
       title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
       category: "Sustainable Mobility / Automotive Engineering",
-      duration: "Summer Semester 2024",
+      duration: "6 Months",
       description: [
         "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
         "Redesigned fuel delivery and engine systems to operate with hydrogen",

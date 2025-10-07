@@ -15,7 +15,7 @@ const Projects = () => {
       ],
       skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
       category: "Mechanical Systems / Industrial Machinery",
-      duration: "Winter Semester 2023-24"
+      duration: "1 Year"
     },
     {
       id: "hydrogen-car",
@@ -28,7 +28,7 @@ const Projects = () => {
       ],
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
       category: "Sustainable Mobility / Automotive Engineering",
-      duration: "Summer Semester 2024"
+      duration: "6 Months"
     },
     {
       id: "hvac-system",
