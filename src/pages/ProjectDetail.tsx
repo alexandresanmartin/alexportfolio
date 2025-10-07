@@ -141,7 +141,7 @@ const ProjectDetail = () => {
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-3 space-y-8">
             <div>
-              <Badge className="mb-4">{project.category}</Badge>
+              <Badge className="mb-2">{project.category}</Badge>
               <p className="text-sm text-muted-foreground mb-4">{project.duration}</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
             </div>

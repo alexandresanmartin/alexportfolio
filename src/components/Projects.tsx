@@ -74,7 +74,7 @@ const Projects = () => {
               <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
               <CardHeader>
                 <Badge className="w-fit mb-2">{project.category}</Badge>
-                <p className="text-xs text-muted-foreground mb-2">{project.duration}</p>
+                <p className="text-xs text-muted-foreground mb-3">{project.duration}</p>
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 <CardDescription className="text-base space-y-2">
                   {Array.isArray(project.description) ? (
