@@ -11,6 +11,7 @@ const ProjectDetail = () => {
   const projectsData: Record<string, {
     title: string;
     category: string;
+    duration: string;
     description: string[];
     skills: string[];
     detailedInfo: string;
@@ -20,6 +21,7 @@ const ProjectDetail = () => {
     "fendt-vario": {
       title: "Fendt Vario Tractor – Mechanical Systems Design",
       category: "Mechanical Systems / Industrial Machinery",
+      duration: "Winter Semester 2023-24",
       description: [
         "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
         "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
@@ -39,6 +41,7 @@ const ProjectDetail = () => {
     "hydrogen-car": {
       title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
       category: "Sustainable Mobility / Automotive Engineering",
+      duration: "Summer Semester 2024",
       description: [
         "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
         "Redesigned fuel delivery and engine systems to operate with hydrogen",
@@ -53,6 +56,7 @@ const ProjectDetail = () => {
     "hvac-system": {
       title: "Sustainable HVAC Design",
       category: "Energy Systems",
+      duration: "Fall Semester 2023",
       description: [
         "Created energy-efficient HVAC solution reducing power consumption by 30% while maintaining optimal climate control."
       ],
@@ -94,6 +98,7 @@ const ProjectDetail = () => {
         <div className="space-y-8">
           <div>
             <Badge className="mb-4">{project.category}</Badge>
+            <p className="text-sm text-muted-foreground mb-4">{project.duration}</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
           </div>
 

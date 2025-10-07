@@ -14,7 +14,8 @@ const Projects = () => {
         "Evaluated costing strategies and outsourcing options to balance technical performance with market feasibility"
       ],
       skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
-      category: "Mechanical Systems / Industrial Machinery"
+      category: "Mechanical Systems / Industrial Machinery",
+      duration: "Winter Semester 2023-24"
     },
     {
       id: "hydrogen-car",
@@ -26,14 +27,16 @@ const Projects = () => {
         "Ensured minimal structural modifications while maintaining performance"
       ],
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
-      category: "Sustainable Mobility / Automotive Engineering"
+      category: "Sustainable Mobility / Automotive Engineering",
+      duration: "Summer Semester 2024"
     },
     {
       id: "hvac-system",
       title: "Sustainable HVAC Design",
       description: "Created energy-efficient HVAC solution reducing power consumption by 30% while maintaining optimal climate control.",
       skills: ["Energy Analysis", "HVAC", "Sustainability", "AutoCAD"],
-      category: "Energy Systems"
+      category: "Energy Systems",
+      duration: "Fall Semester 2023"
     }
   ];
 
@@ -53,6 +56,7 @@ const Projects = () => {
               <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
               <CardHeader>
                 <Badge className="w-fit mb-2">{project.category}</Badge>
+                <p className="text-xs text-muted-foreground mb-2">{project.duration}</p>
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 <CardDescription className="text-base space-y-2">
                   {Array.isArray(project.description) ? (
