@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import PDFViewer from "@/components/PDFViewer";
 import kartFrame from "@/assets/kart-frame.png";
+import { useEffect } from "react";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -123,6 +124,11 @@ const ProjectDetail = () => {
   };
 
   const project = projectId ? projectsData[projectId] : null;
+
+  // Scroll to top when component mounts or projectId changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectId]);
 
   if (!project) {
     return (
