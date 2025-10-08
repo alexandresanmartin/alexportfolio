@@ -57,7 +57,7 @@ const Projects = () => {
       id: "drift-kart",
       title: "Drift Kart",
       category: "Upcoming Project",
-      image: kartFrame
+      image: undefined
     }
   ];
 
