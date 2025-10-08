@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import kartFrame from "@/assets/kart-frame.png";
 
 const Projects = () => {
   const projects = [
@@ -49,12 +50,14 @@ const Projects = () => {
     {
       id: "modular-drone",
       title: "Lightweight Modular Drone",
-      category: "Upcoming Project"
+      category: "Upcoming Project",
+      image: undefined as string | undefined
     },
     {
       id: "drift-kart",
       title: "Drift Kart",
-      category: "Upcoming Project"
+      category: "Upcoming Project",
+      image: kartFrame
     }
   ];
 
@@ -114,7 +117,16 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {futureProjects.map((project, index) => (
               <Link key={index} to={`/project/${project.id}`}>
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer overflow-hidden">
+                  {project.image && (
+                    <CardContent className="p-0">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} preview`}
+                        className="w-full h-40 object-cover"
+                      />
+                    </CardContent>
+                  )}
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between">
                       <div>

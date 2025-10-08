@@ -189,7 +189,7 @@ const ProjectDetail = () => {
               <h2 className="text-2xl font-semibold">Detailed Information</h2>
               <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
             {projectId === "fendt-vario" && (
-              <p className="text-lg text-muted-foreground italic">More information on request, Limited availability due to privacy requirements</p>
+              <p className="text-lg text-muted-foreground italic">Different Original concept sketches exist only as physical copies and have not yet been converted to digital format.</p>
             )}
             {projectId === "hydrogen-car" && (
               <>
