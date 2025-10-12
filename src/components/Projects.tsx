@@ -62,11 +62,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-muted/50">
+    <section id="projects" className="py-20 px-4">
       <div className="container max-w-6xl">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
             A selection of engineering projects demonstrating problem-solving abilities and technical expertise
           </p>
         </div>
@@ -110,8 +110,8 @@ const Projects = () => {
 
         <div className="space-y-6">
           <div className="text-center space-y-2">
-            <h3 className="text-2xl md:text-3xl font-bold">Future Projects</h3>
-            <p className="text-muted-foreground">Upcoming engineering ventures</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white">Future Projects</h3>
+            <p className="text-white/90">Upcoming engineering ventures</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">

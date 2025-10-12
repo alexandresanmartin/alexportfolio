@@ -194,6 +194,15 @@ const ProjectDetail = () => {
                 <p>Modular multifunction Drone with a variable design tailored to demand and intent.</p>
                 <p>Single/Multi-Use Drones for different applications and solutions</p>
                 <p>Standarized manufacturing thanks to Modularity and User Interaction</p>
+                <p className="mt-3">An early concept — one of the ideas I'm exploring for a potential master's thesis, pending further development and evaluation.</p>
+              </div>
+            )}
+            {projectId === "drift-kart" && (
+              <div className="text-lg text-muted-foreground space-y-1">
+                <p className="italic">Needs:</p>
+                <p>Workshop Space (no access to one in Switzerland)</p>
+                <p>Free Time in Spain</p>
+                <p>Tools/Soldering equipment depending on the found Chassis quality</p>
               </div>
             )}
             {projectId === "fendt-vario" && (

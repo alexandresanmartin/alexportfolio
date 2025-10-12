@@ -37,7 +37,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ name, url }) => {
   };
 
   return (
-    <div className="flex items-center justify-between p-4 border rounded-lg hover:bg-accent transition-colors">
+    <div className="flex items-center justify-between p-4 border hover:bg-accent transition-colors">
       <div className="flex items-center space-x-3">
         <FileText className="h-5 w-5 text-muted-foreground" />
         <span className="font-medium">{name}</span>

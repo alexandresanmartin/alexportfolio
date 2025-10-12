@@ -29,8 +29,8 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4">
       <div className="container max-w-6xl">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold">Technical Skills</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Technical Skills</h2>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Comprehensive engineering capabilities across design, analysis, and manufacturing
           </p>
         </div>
@@ -42,7 +42,7 @@ const Skills = () => {
               <Card key={index}>
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
+                    <div className="p-2 bg-primary/10">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle>{category.title}</CardTitle>
@@ -53,7 +53,7 @@ const Skills = () => {
                     {category.skills.map((skill, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-sm"
+                        className="px-3 py-1 bg-secondary text-secondary-foreground text-sm"
                       >
                         {skill}
                       </span>
