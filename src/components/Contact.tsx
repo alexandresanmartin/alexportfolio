@@ -28,20 +28,14 @@ const Contact = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <a 
-                href="mailto:alexandresanmartingoyanes@gmail.com" 
-                className="group flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 rounded-lg p-4 transition-all"
-              >
-                <Mail className="h-5 w-5 text-white group-hover:scale-110 transition-transform" />
-                <span className="text-white text-sm">Email Me</span>
-              </a>
-              <a 
-                href="tel:+41772891933" 
-                className="group flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 rounded-lg p-4 transition-all"
-              >
-                <Phone className="h-5 w-5 text-white group-hover:scale-110 transition-transform" />
-                <span className="text-white text-sm">Call Me</span>
-              </a>
+              <div className="flex items-center justify-center gap-3 bg-white/10 border border-white/20 rounded-lg p-4">
+                <Mail className="h-5 w-5 text-white" />
+                <span className="text-white text-sm">alexandresanmartingoyanes@gmail.com</span>
+              </div>
+              <div className="flex items-center justify-center gap-3 bg-white/10 border border-white/20 rounded-lg p-4">
+                <Phone className="h-5 w-5 text-white" />
+                <span className="text-white text-sm">+41 772891933</span>
+              </div>
             </div>
 
             <div className="pt-2">

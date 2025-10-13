@@ -7,12 +7,12 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Top half - White background */}
-      <div className="bg-white h-[50vh] relative">
+      <div className="bg-white min-h-[50vh] relative">
         <Hero />
       </div>
       
       {/* Bottom half - Blue background */}
-      <div className="bg-primary min-h-[50vh] relative">
+      <div className="bg-primary relative">
         <Projects />
         <Skills />
         <Contact />

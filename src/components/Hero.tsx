@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    console.log('Scrolling to:', id);
+    const element = document.getElementById(id);
+    console.log('Element found:', element);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error('Element not found:', id);
+    }
   };
 
   return (
@@ -35,9 +43,42 @@ const Hero = () => {
               <span className="px-4 py-2 bg-primary/10 border border-primary/20 text-primary backdrop-blur-sm">Mechanical Systems</span>
               <span className="px-4 py-2 bg-primary/10 border border-primary/20 text-primary backdrop-blur-sm">Industrial Applications</span>
             </div>
-            <p className="text-lg md:text-xl text-primary font-medium pt-2">
-              Alexandre Sanmartin Goyanes
-            </p>
+            
+            {/* Profile Picture */}
+            <div className="flex flex-col items-center gap-3 pt-4">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="group relative">
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg hover:border-primary/60 transition-all hover:scale-105 cursor-pointer">
+                      <img 
+                        src="/profile-picture.jpg" 
+                        alt="Alexandre Sanmartin Goyanes"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback to placeholder if image not found
+                          e.currentTarget.src = "/placeholder.svg";
+                        }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/10 transition-all"></div>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl">
+                  <img 
+                    src="/profile-picture.jpg" 
+                    alt="Alexandre Sanmartin Goyanes"
+                    className="w-full h-auto rounded-lg"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg";
+                    }}
+                  />
+                </DialogContent>
+              </Dialog>
+              
+              <p className="text-lg md:text-xl text-primary font-medium">
+                Alexandre Sanmartin Goyanes
+              </p>
+            </div>
           </div>
         </div>
 
