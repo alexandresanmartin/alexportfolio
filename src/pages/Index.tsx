@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import FloatingActions from "@/components/FloatingActions";
 
 const Index = () => {
   return (
@@ -17,6 +18,9 @@ const Index = () => {
         <Skills />
         <Contact />
       </div>
+      
+      {/* Floating action buttons */}
+      <FloatingActions />
     </div>
   );
 };
