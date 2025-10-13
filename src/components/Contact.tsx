@@ -20,11 +20,14 @@ const Contact = () => {
               <p className="text-base text-white/80">
                 Actively seeking Mechanical Engineering internship opportunities in Aerospace and Automotive Industry
               </p>
+              <p className="text-sm text-white/70">
+                Open to opportunities in Switzerland, Europe, and the USA
+              </p>
             </div>
 
             <div className="flex items-center justify-center gap-2 text-white/80">
               <MapPin className="h-5 w-5" />
-              <span>Zürich, Switzerland</span>
+              <span>Based in Zürich, Switzerland</span>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
