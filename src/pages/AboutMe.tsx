@@ -39,7 +39,7 @@ const AboutMe = () => {
                 industries.
               </p>
               <p>
-                I grew up in rural Galicia, Spain. There, me and my brothers learned to build and dismount all types of things. 
+                I grew up in rural Galicia, Spain. There, me and my brothers learned to build and disassemble all types of things. 
                 From toys like Lego sets to self made bolides assembled with spare parts at home. This creative upbringing has 
                 really given me a different perspective in problem solving and creative approaches.
               </p>
