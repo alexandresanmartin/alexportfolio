@@ -34,16 +34,21 @@ const AboutMe = () => {
             </CardHeader>
             <CardContent className="space-y-4 text-lg">
               <p>
-                I'm Alexandre Sanmartin Goyanes, a Mechanical Engineering student based in Zürich, Switzerland, 
-                with a passion for innovative design and practical problem-solving in the automotive and aerospace industries.
+                Hello! I am Alexandre Sanmartin Goyanes, a Mechanical Engineering student at ETH Zürich, Switzerland, 
+                passionate about innovative design and practical problem-solving in the automotive and aerospace industries.
               </p>
               <p>
-                My academic and hands-on experience spans from designing complex mechanical systems like gearboxes 
-                and suspension systems to working on cutting-edge projects in hydrogen combustion and Formula Student racing.
+                My experience bridges academic research and hands-on engineering, from developing complex mechanical systems—such 
+                as gearboxes, suspension mechanisms, and adaptive drivetrains—to contributing to hydrogen combustion and Formula 
+                Student projects focused on performance and sustainability.
               </p>
               <p>
-                I thrive in environments where engineering meets creativity, constantly seeking opportunities to 
-                push the boundaries of what's possible through design, analysis, and implementation.
+                I enjoy the full process of turning ideas into real, manufacturable products, applying modern design and production 
+                techniques to ensure that creativity is always grounded in technical feasibility.
+              </p>
+              <p>
+                I'm motivated by the intersection of engineering and creativity, continuously seeking opportunities to push 
+                boundaries through thoughtful design, analysis, and implementation.
               </p>
             </CardContent>
           </Card>
@@ -55,9 +60,9 @@ const AboutMe = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h3 className="text-xl font-semibold">Karlsruhe Institute of Technology (KIT)</h3>
-                <p className="text-muted-foreground">Bachelor of Science in Mechanical Engineering</p>
-                <p className="text-sm text-muted-foreground">Karlsruhe, Germany</p>
+                <h3 className="text-xl font-semibold">ETH Zürich</h3>
+                <p className="text-muted-foreground">Mechanical Engineering</p>
+                <p className="text-sm text-muted-foreground">Zürich, Switzerland</p>
               </div>
             </CardContent>
           </Card>
