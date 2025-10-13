@@ -9,7 +9,7 @@ const Projects = () => {
       id: "fendt-vario",
       title: "Fendt Vario Tractor – Mechanical Systems Design",
       description: [
-        "Designed and developed gearbox, suspension, height–adjustment system, and variable–height drivetrain",
+        "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
         "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
         "Ensured efficiency, durability, and adaptability across varied agricultural terrains",
         "Evaluated costing strategies and outsourcing options to balance technical performance with market feasibility"
@@ -22,7 +22,7 @@ const Projects = () => {
       id: "hydrogen-car",
       title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
       description: [
-        "Converted a previous–generation gasoline vehicle into a hydrogen combustion prototype",
+        "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
         "Redesigned fuel delivery and engine systems to operate with hydrogen",
         "Implemented safety adaptations for storage and handling of hydrogen",
         "Ensured minimal structural modifications while maintaining performance"
@@ -35,10 +35,10 @@ const Projects = () => {
       id: "hvac-system",
       title: "Research Paper in Niobium Based Alloys",
       description: [
-        "Researched the limitations of niobium alloys in high–temperature aerospace use, focusing on catastrophic oxidation",
-        "Evaluated coating methods (aluminide, silicide, dual–layer systems) to improve oxidation resistance",
+        "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
+        "Evaluated coating methods (aluminide, silicide, dual-layer systems) to improve oxidation resistance",
         "Compared alternative materials (tungsten, molybdenum, advanced ceramics, and composites) for superior thermal stability",
-        "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long–term high–temperature performance"
+        "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long-term high-temperature performance"
       ],
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
       category: "Research",

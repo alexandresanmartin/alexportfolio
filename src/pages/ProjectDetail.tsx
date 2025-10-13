@@ -38,13 +38,13 @@ const ProjectDetail = () => {
       category: "Mechanical Systems / Industrial Machinery",
       duration: "1 Year",
       description: [
-        "Designed and developed gearbox, suspension, height–adjustment system, and variable–height drivetrain",
+        "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
         "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
         "Ensured efficiency, durability, and adaptability across varied agricultural terrains",
         "Evaluated costing strategies and outsourcing options to balance technical performance with market feasibility"
       ],
       skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
-      detailedInfo: "Task (University Workshop): Develop a next–generation modular powertrain for a Fendt tractor, including combustion and hybrid variants. Analyze the previous system, define objectives, and design key subsystems (gearbox, hybrid module, PTO, clutches, and chassis) with focus on manufacturability, efficiency, and modular integration.",
+      detailedInfo: "Task (University Workshop): Develop a next-generation modular powertrain for a Fendt tractor, including combustion and hybrid variants. Analyze the previous system, define objectives, and design key subsystems (gearbox, hybrid module, PTO, clutches, and chassis) with focus on manufacturability, efficiency, and modular integration.",
       images: [],
       documents: [
         { name: "Task 1", url: `${import.meta.env.BASE_URL}Workshop_Task_MD3_WS_23_24.pdf` },
@@ -66,7 +66,7 @@ const ProjectDetail = () => {
       category: "Sustainable Mobility / Automotive Engineering",
       duration: "6 Months",
       description: [
-        "Converted a previous–generation gasoline vehicle into a hydrogen combustion prototype",
+        "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
         "Redesigned fuel delivery and engine systems to operate with hydrogen",
         "Implemented safety adaptations for storage and handling of hydrogen",
         "Ensured minimal structural modifications while maintaining performance"
@@ -81,10 +81,10 @@ const ProjectDetail = () => {
       category: "Research",
       duration: "4 Months",
       description: [
-        "Researched the limitations of niobium alloys in high–temperature aerospace use, focusing on catastrophic oxidation",
-        "Evaluated coating methods (aluminide, silicide, dual–layer systems) to improve oxidation resistance",
+        "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
+        "Evaluated coating methods (aluminide, silicide, dual-layer systems) to improve oxidation resistance",
         "Compared alternative materials (tungsten, molybdenum, advanced ceramics, and composites) for superior thermal stability",
-        "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long–term high–temperature performance"
+        "Concluded that while coatings provide temporary improvements, alternative refractory alloys and composites are more reliable for long-term high-temperature performance"
       ],
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
       detailedInfo: "Research project done with the IAM Institute of KIT",
@@ -192,7 +192,7 @@ const ProjectDetail = () => {
               <div className="text-lg text-muted-foreground space-y-1">
                 <p className="italic">Idea:</p>
                 <p>Modular multifunction Drone with a variable design tailored to demand and intent.</p>
-                <p>Single/Multi–Use Drones for different applications and solutions</p>
+                <p>Single/Multi-Use Drones for different applications and solutions</p>
                 <p>Standarized manufacturing thanks to Modularity and User Interaction</p>
                 <p className="mt-3">An early concept — one of the ideas I'm exploring for a potential master's thesis, pending further development and evaluation.</p>
               </div>
