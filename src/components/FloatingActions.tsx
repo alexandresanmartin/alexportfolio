@@ -23,12 +23,8 @@ const FloatingActions = () => {
     }
   };
 
-  const downloadCV = () => {
-    // Create a link to download the CV
-    const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}CV.pdf`;
-    link.download = 'Alexandre_Sanmartin_CV.pdf';
-    link.click();
+  const goToResume = () => {
+    navigate('/resume');
   };
 
   return (
@@ -55,7 +51,7 @@ const FloatingActions = () => {
           <TooltipTrigger asChild>
             <Button
               size="lg"
-              onClick={downloadCV}
+              onClick={goToResume}
               variant="outline"
               className="shadow-lg hover:shadow-xl transition-all bg-white border-2 border-primary text-primary hover:bg-primary/10 rounded-full h-14 px-6"
             >
@@ -64,7 +60,7 @@ const FloatingActions = () => {
             </Button>
           </TooltipTrigger>
           <TooltipContent>
-            <p>Download my CV</p>
+            <p>View my CV</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

@@ -42,20 +42,12 @@ const Navigation = () => {
     }
   };
 
-  const downloadCV = () => {
-    setIsOpen(false);
-    const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}CV.pdf`;
-    link.download = 'Alexandre_Sanmartin_CV.pdf';
-    link.click();
-  };
-
   const navItems = [
     { name: 'Home', icon: Home, action: scrollToHome },
     { name: 'About Me', icon: User, link: '/about' },
     { name: 'Projects', icon: Briefcase, action: () => scrollToSection('projects') },
     { name: 'Contact', icon: Mail, action: () => scrollToSection('contact') },
-    { name: 'Resume', icon: FileText, action: downloadCV },
+    { name: 'Resume', icon: FileText, link: '/resume' },
   ];
 
   return (
