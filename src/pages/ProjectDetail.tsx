@@ -47,18 +47,18 @@ const ProjectDetail = () => {
       detailedInfo: "Task (University Workshop): Develop a next-generation modular powertrain for a Fendt tractor, including combustion and hybrid variants. Analyze the previous system, define objectives, and design key subsystems (gearbox, hybrid module, PTO, clutches, and chassis) with focus on manufacturability, efficiency, and modular integration.",
       images: [],
       documents: [
-        { name: "Task 1", url: "/Workshop_Task_MD3_WS_23_24.pdf" },
-        { name: "Task 2", url: "/Workshopaufgabe_MKL4_SS24_EN_V1.pdf" },
-        { name: "Variable Height Power transmitting shaft", url: "/D22_VersGetr_Konstruktion_AS.pdf" },
-        { name: "Transanxle Concept", url: "/Pablooo_Lope.pdf" },
-        { name: "Bearing Selection", url: "/Bearing_Selection.pdf" },
-        { name: "Calculation Breakdown", url: "/Calculation_Breakdown.pdf" },
-        { name: "Gearbox Concept 1", url: "/Gearbox_Concept_1.pdf" },
-        { name: "Gearbox Concept 2", url: "/Gearbox_Concept_2.pdf" },
-        { name: "Cost Calculation", url: "/Cost_Calculation.pdf" },
-        { name: "Sketch", url: "/Sketch.pdf" },
-        { name: "Minimum Shaft Diameter Calculations", url: "/Minimum_Shaft_Diameter_Calculations.pdf" },
-        { name: "Technical Drawing Gearbox", url: "/Technical_Drawing_Gearbox.pdf" }
+        { name: "Task 1", url: `${import.meta.env.BASE_URL}Workshop_Task_MD3_WS_23_24.pdf` },
+        { name: "Task 2", url: `${import.meta.env.BASE_URL}Workshopaufgabe_MKL4_SS24_EN_V1.pdf` },
+        { name: "Variable Height Power transmitting shaft", url: `${import.meta.env.BASE_URL}D22_VersGetr_Konstruktion_AS.pdf` },
+        { name: "Transanxle Concept", url: `${import.meta.env.BASE_URL}Pablooo_Lope.pdf` },
+        { name: "Bearing Selection", url: `${import.meta.env.BASE_URL}Bearing_Selection.pdf` },
+        { name: "Calculation Breakdown", url: `${import.meta.env.BASE_URL}Calculation_Breakdown.pdf` },
+        { name: "Gearbox Concept 1", url: `${import.meta.env.BASE_URL}Gearbox_Concept_1.pdf` },
+        { name: "Gearbox Concept 2", url: `${import.meta.env.BASE_URL}Gearbox_Concept_2.pdf` },
+        { name: "Cost Calculation", url: `${import.meta.env.BASE_URL}Cost_Calculation.pdf` },
+        { name: "Sketch", url: `${import.meta.env.BASE_URL}Sketch.pdf` },
+        { name: "Minimum Shaft Diameter Calculations", url: `${import.meta.env.BASE_URL}Minimum_Shaft_Diameter_Calculations.pdf` },
+        { name: "Technical Drawing Gearbox", url: `${import.meta.env.BASE_URL}Technical_Drawing_Gearbox.pdf` }
       ]
     },
     "hydrogen-car": {
@@ -90,8 +90,8 @@ const ProjectDetail = () => {
       detailedInfo: "Research project done with the IAM Institute of KIT",
       images: [],
       documents: [
-        { name: "Research Paper", url: "/Research_Paper.pdf" },
-        { name: "Research Question", url: "/Research_Question.pdf" }
+        { name: "Research Paper", url: `${import.meta.env.BASE_URL}Research_Paper.pdf` },
+        { name: "Research Question", url: `${import.meta.env.BASE_URL}Research_Question.pdf` }
       ]
     },
     "modular-drone": {
