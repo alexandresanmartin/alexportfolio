@@ -58,11 +58,16 @@ const AboutMe = () => {
             <CardHeader>
               <CardTitle>Education</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6">
               <div>
                 <h3 className="text-xl font-semibold">ETH Zürich</h3>
-                <p className="text-muted-foreground">Mechanical Engineering</p>
+                <p className="text-muted-foreground">Master of Science in Mechanical Engineering</p>
                 <p className="text-sm text-muted-foreground">Zürich, Switzerland</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">Karlsruhe Institute of Technology (KIT)</h3>
+                <p className="text-muted-foreground">Bachelor of Science in Mechanical Engineering</p>
+                <p className="text-sm text-muted-foreground">Karlsruhe, Germany</p>
               </div>
             </CardContent>
           </Card>
