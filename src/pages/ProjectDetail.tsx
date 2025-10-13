@@ -201,14 +201,6 @@ const ProjectDetail = () => {
                 <p className="mt-3">An early concept — one of the ideas I'm exploring for a potential master's thesis, pending further development and evaluation.</p>
               </div>
             )}
-            {projectId === "drift-kart" && (
-              <div className="text-lg text-muted-foreground space-y-1">
-                <p className="italic">Needs:</p>
-                <p>Workshop Space (no access to one in Switzerland)</p>
-                <p>Free Time in Spain</p>
-                <p>Tools/Soldering equipment depending on the found Chassis quality</p>
-              </div>
-            )}
             {projectId === "fendt-vario" && (
               <p className="text-lg text-muted-foreground italic">Different Original concept sketches exist only as physical copies and have not yet been converted to digital format.</p>
             )}
