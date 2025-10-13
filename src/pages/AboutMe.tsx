@@ -98,13 +98,13 @@ const AboutMe = () => {
             </CardHeader>
             <CardContent className="space-y-4 text-lg">
               <p>
-                I believe that great engineering comes from understanding both the technical details and the bigger picture. 
-                Whether it's optimizing a gearbox for a tractor or researching advanced materials for aerospace applications, 
-                I approach every project with curiosity, precision, and a commitment to excellence.
+                I really believe great engineering derives from understanding both the technical details and the broader context. 
+                Whether optimizing a tractor gearbox or exploring advanced techniques for aerospace applications, I approach 
+                every project with curiosity, precision, and a drive for excellence.
               </p>
               <p>
-                I'm constantly learning, whether through academic research, hands-on projects, or collaborating with 
-                talented teams in student competitions and internships.
+                I'm continuously learning—through academic research, hands-on projects, and collaboration with multidisciplinary 
+                teams in student competitions and university.
               </p>
             </CardContent>
           </Card>
