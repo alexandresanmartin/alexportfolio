@@ -16,7 +16,8 @@ const Projects = () => {
       ],
       skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
       category: "Mechanical Systems / Industrial Machinery",
-      duration: "1 Year"
+      duration: "1 Year",
+      organization: "Institute of Product Development, KIT Karlsruhe"
     },
     {
       id: "hydrogen-car",
@@ -29,7 +30,8 @@ const Projects = () => {
       ],
       skills: ["Powertrain Adaptation", "CAD Modeling", "Thermodynamics", "Hydrogen Safety", "System Integration"],
       category: "Sustainable Mobility / Automotive Engineering",
-      duration: "6 Months"
+      duration: "6 Months",
+      organization: "KA RaceIng Formula Student Team"
     },
     {
       id: "hvac-system",
@@ -42,7 +44,8 @@ const Projects = () => {
       ],
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
       category: "Research",
-      duration: "4 Months"
+      duration: "4 Months",
+      organization: "Institute of Applied Materials, KIT Karlsruhe"
     }
   ];
 
@@ -51,12 +54,14 @@ const Projects = () => {
       id: "modular-drone",
       title: "Lightweight Modular Drone",
       category: "Upcoming Project",
+      organization: "Personal Project",
       image: undefined as string | undefined
     },
     {
       id: "drift-kart",
       title: "Drift Kart",
       category: "Upcoming Project",
+      organization: "Personal Project",
       image: undefined
     }
   ];
@@ -77,7 +82,8 @@ const Projects = () => {
               <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
               <CardHeader>
                 <Badge className="w-fit mb-2">{project.category}</Badge>
-                <p className="text-xs text-muted-foreground mb-3">{project.duration}</p>
+                <p className="text-xs text-muted-foreground">{project.duration}</p>
+                <p className="text-xs text-muted-foreground mb-3">{project.organization}</p>
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 <CardDescription className="text-base space-y-2">
                   {Array.isArray(project.description) ? (
@@ -131,6 +137,7 @@ const Projects = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <Badge className="mb-2">{project.category}</Badge>
+                        <p className="text-xs text-muted-foreground mb-2">{project.organization}</p>
                         <CardTitle className="text-lg">{project.title}</CardTitle>
                       </div>
                     </div>
