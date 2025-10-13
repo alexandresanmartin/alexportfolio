@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/mech-cali-showcase-64034/',
+  base: '/alexportfolio/',
   server: {
     host: "::",
     port: 3001,
