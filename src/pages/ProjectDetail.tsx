@@ -104,7 +104,7 @@ const ProjectDetail = () => {
         "Project in development phase"
       ],
       skills: ["Drone Design", "Lightweight Structures", "Modular Systems"],
-      detailedInfo: "This project is currently in the planning and development phase. More details will be available soon.",
+      detailedInfo: "Modular multifunction Drone with a variable design tailored to demand and intent.\n\nSingle/Multi-Use Drones for different applications and solutions",
       images: [],
       documents: []
     },
@@ -192,15 +192,6 @@ const ProjectDetail = () => {
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Detailed Information</h2>
               <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
-            {projectId === "modular-drone" && (
-              <div className="text-lg text-muted-foreground space-y-1">
-                <p className="italic">Idea:</p>
-                <p>Modular multifunction Drone with a variable design tailored to demand and intent.</p>
-                <p>Single/Multi-Use Drones for different applications and solutions</p>
-                <p>Standarized manufacturing thanks to Modularity and User Interaction</p>
-                <p className="mt-3">An early concept — one of the ideas I'm exploring for a potential master's thesis, pending further development and evaluation.</p>
-              </div>
-            )}
             {projectId === "fendt-vario" && (
               <p className="text-lg text-muted-foreground italic">Different Original concept sketches exist only as physical copies and have not yet been converted to digital format.</p>
             )}
