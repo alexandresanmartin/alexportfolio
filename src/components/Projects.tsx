@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       id: "fendt-vario",
-      title: "Fendt Vario Tractor – Mechanical Systems Design",
+      title: "Fendt Vario Tractor - Mechanical Systems Design",
       description: [
         "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
         "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
@@ -20,7 +20,7 @@ const Projects = () => {
     },
     {
       id: "hydrogen-car",
-      title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
+      title: "Hydrogen Combustion Car - Conversion from Gasoline Platform (Formula Student)",
       description: [
         "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
         "Redesigned fuel delivery and engine systems to operate with hydrogen",

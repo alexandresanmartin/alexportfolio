@@ -34,7 +34,7 @@ const ProjectDetail = () => {
     documents: { name: string; url: string }[];
   }> = {
     "fendt-vario": {
-      title: "Fendt Vario Tractor – Mechanical Systems Design",
+      title: "Fendt Vario Tractor - Mechanical Systems Design",
       category: "Mechanical Systems / Industrial Machinery",
       duration: "1 Year",
       description: [
@@ -62,7 +62,7 @@ const ProjectDetail = () => {
       ]
     },
     "hydrogen-car": {
-      title: "Hydrogen Combustion Car – Conversion from Gasoline Platform (Formula Student)",
+      title: "Hydrogen Combustion Car - Conversion from Gasoline Platform (Formula Student)",
       category: "Sustainable Mobility / Automotive Engineering",
       duration: "6 Months",
       description: [
