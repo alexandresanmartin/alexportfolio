@@ -22,13 +22,47 @@ const Hero = () => {
       
       <div className="container max-w-6xl text-center space-y-8 relative z-10">
         <div className="space-y-6 animate-fade-in">
+          {/* Name */}
+          <p className="text-4xl md:text-6xl text-primary font-bold">
+            Alexandre Sanmartin Goyanes
+          </p>
+          
+          {/* Profile Picture */}
+          <div className="flex flex-col items-center">
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="group relative">
+                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg hover:border-primary/60 transition-all hover:scale-105 cursor-pointer">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
+                      alt="Alexandre Sanmartin Goyanes"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback to placeholder if image not found
+                        e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                      }}
+                    />
+                  </div>
+                  <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/10 transition-all"></div>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <img 
+                  src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
+                  alt="Alexandre Sanmartin Goyanes"
+                  className="w-full h-auto rounded-lg"
+                  onError={(e) => {
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
+                />
+              </DialogContent>
+            </Dialog>
+          </div>
+          
           <div className="inline-block">
             <div className="relative">
-              <h1 className="text-5xl md:text-7xl font-bold text-primary tracking-tight leading-none">
-                <span className="block">
-                  MECHANICAL
-                </span>
-                <span className="block mt-2">ENGINEERING</span>
+              <h1 className="text-2xl md:text-3xl font-semibold text-primary tracking-tight leading-none">
+                MECHANICAL ENGINEERING
               </h1>
               <div className="absolute -inset-1 bg-white opacity-10 blur-3xl -z-10"></div>
             </div>
@@ -42,42 +76,6 @@ const Hero = () => {
               <span className="px-4 py-2 bg-primary/10 border border-primary/20 text-primary backdrop-blur-sm">Product Design</span>
               <span className="px-4 py-2 bg-primary/10 border border-primary/20 text-primary backdrop-blur-sm">Mechanical Systems</span>
               <span className="px-4 py-2 bg-primary/10 border border-primary/20 text-primary backdrop-blur-sm">Industrial Applications</span>
-            </div>
-            
-            {/* Profile Picture */}
-            <div className="flex flex-col items-center gap-3 pt-4">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="group relative">
-                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg hover:border-primary/60 transition-all hover:scale-105 cursor-pointer">
-                      <img 
-                        src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
-                        alt="Alexandre Sanmartin Goyanes"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          // Fallback to placeholder if image not found
-                          e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
-                        }}
-                      />
-                    </div>
-                    <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/10 transition-all"></div>
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-2xl">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
-                    alt="Alexandre Sanmartin Goyanes"
-                    className="w-full h-auto rounded-lg"
-                    onError={(e) => {
-                      e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
-                    }}
-                  />
-                </DialogContent>
-              </Dialog>
-              
-              <p className="text-lg md:text-xl text-primary font-medium">
-                Alexandre Sanmartin Goyanes
-              </p>
             </div>
           </div>
         </div>
