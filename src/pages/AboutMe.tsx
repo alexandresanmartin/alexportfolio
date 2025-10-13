@@ -34,13 +34,13 @@ const AboutMe = () => {
             </CardHeader>
             <CardContent className="space-y-4 text-lg">
               <p>
-                Hello! I am Alexandre Sanmartin Goyanes, a Mechanical Engineering student at ETH Zürich, Switzerland, 
+                Hello! I am Alexandre Sanmartin Goyanes, a Mechanical Engineering at ETH Zürich, Switzerland, 
                 passionate about innovative design and practical problem-solving in the automotive and aerospace industries.
               </p>
               <p>
-                My experience bridges academic research and hands-on engineering, from developing complex mechanical systems—such 
-                as gearboxes, suspension mechanisms, and adaptive drivetrains—to contributing to hydrogen combustion and Formula 
-                Student projects focused on performance and sustainability.
+                My experience bridges academic research and hands-on engineering, from developing complex mechanical systems: 
+                such as gearboxes, suspension mechanisms, and adaptive drivetrains; to contributing to hydrogen combustion and 
+                Formula Student projects focused on performance and sustainability.
               </p>
               <p>
                 I enjoy the full process of turning ideas into real, manufacturable products, applying modern design and production 
