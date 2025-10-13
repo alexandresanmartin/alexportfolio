@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import PDFViewer from "@/components/PDFViewer";
+import FloatingActions from "@/components/FloatingActions";
 import kartFrame from "@/assets/kart-frame.png";
 import { useEffect } from "react";
 
@@ -142,6 +143,9 @@ const ProjectDetail = () => {
             </Button>
           </Link>
         </div>
+        
+        {/* Floating action buttons */}
+        <FloatingActions />
       </div>
     );
   }
@@ -258,6 +262,9 @@ const ProjectDetail = () => {
           )}
         </div>
       </div>
+      
+      {/* Floating action buttons */}
+      <FloatingActions />
     </div>
   );
 };

@@ -1,12 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Download } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const FloatingActions = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If contact section doesn't exist, navigate to home first
+      navigate('/');
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 
