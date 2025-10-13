@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="inline-block">
             <div className="relative">
               <h1 className="text-2xl md:text-3xl font-semibold text-primary tracking-tight leading-none">
-                MECHANICAL ENGINEERING
+                MECHANICAL ENGINEERING MASTER STUDENT
               </h1>
               <div className="absolute -inset-1 bg-white opacity-10 blur-3xl -z-10"></div>
             </div>
