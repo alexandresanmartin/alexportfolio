@@ -26,7 +26,8 @@ const FloatingActions = () => {
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="shadow-lg hover:shadow-xl transition-all bg-primary hover:bg-primary/90 text-white rounded-full h-14 px-6"
+              variant="outline"
+              className="shadow-lg hover:shadow-xl transition-all bg-white border-2 border-primary text-primary hover:bg-primary/10 rounded-full h-14 px-6"
             >
               <Mail className="h-5 w-5 mr-2" />
               Contact
@@ -43,7 +44,7 @@ const FloatingActions = () => {
               size="lg"
               onClick={downloadCV}
               variant="outline"
-              className="shadow-lg hover:shadow-xl transition-all bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-full h-14 px-6"
+              className="shadow-lg hover:shadow-xl transition-all bg-white border-2 border-primary text-primary hover:bg-primary/10 rounded-full h-14 px-6"
             >
               <Download className="h-5 w-5 mr-2" />
               CV
