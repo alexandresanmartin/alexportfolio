@@ -27,6 +27,7 @@ const ProjectDetail = () => {
     title: string;
     category: string;
     duration: string;
+    organization?: string;
     description: string[];
     skills: string[];
     detailedInfo: string;
@@ -38,6 +39,7 @@ const ProjectDetail = () => {
       title: "Fendt Vario Tractor - Mechanical Systems Design",
       category: "Mechanical Systems / Industrial Machinery",
       duration: "1 Year",
+      organization: "Institute of Product Development, KIT Karlsruhe",
       description: [
         "Designed and developed gearbox, suspension, height-adjustment system, and variable-height drivetrain",
         "Integrated product design and implementation, from CAD modeling to manufacturability and dimensioning",
@@ -66,6 +68,7 @@ const ProjectDetail = () => {
       title: "Hydrogen Combustion Car - Conversion from Gasoline Platform (Formula Student)",
       category: "Sustainable Mobility / Automotive Engineering",
       duration: "6 Months",
+      organization: "KA RaceIng Formula Student Team",
       description: [
         "Converted a previous-generation gasoline vehicle into a hydrogen combustion prototype",
         "Redesigned fuel delivery and engine systems to operate with hydrogen",
@@ -81,6 +84,7 @@ const ProjectDetail = () => {
       title: "Research Paper in Niobium Based Alloys",
       category: "Research",
       duration: "4 Months",
+      organization: "Institute of Applied Materials, KIT Karlsruhe",
       description: [
         "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
         "Evaluated coating methods (aluminide, silicide, dual-layer systems) to improve oxidation resistance",
@@ -99,6 +103,7 @@ const ProjectDetail = () => {
       title: "Lightweight Modular Drone",
       category: "Upcoming Project",
       duration: "TBD",
+      organization: "Personal Project",
       description: [
         "Designing a lightweight modular drone system",
         "Project in development phase"
@@ -112,6 +117,7 @@ const ProjectDetail = () => {
       title: "Drift Kart",
       category: "Upcoming Project",
       duration: "TBD",
+      organization: "Personal Project",
       description: [
         "Building a custom drift kart",
         "Project in development phase"
@@ -162,7 +168,12 @@ const ProjectDetail = () => {
           <div className="lg:col-span-3 space-y-8">
             <div>
               <Badge className="mb-2">{project.category}</Badge>
-              <p className="text-sm text-muted-foreground mb-4">{project.duration}</p>
+              <p className="text-sm text-muted-foreground">{project.duration}</p>
+              {project.organization ? (
+                <p className="text-sm text-muted-foreground mb-4">{project.organization}</p>
+              ) : (
+                <div className="mb-4"></div>
+              )}
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
             </div>
 
