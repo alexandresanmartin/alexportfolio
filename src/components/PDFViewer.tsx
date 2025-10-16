@@ -1,111 +1,152 @@
 import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Download, ExternalLink, FileText } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, RotateCw } from 'lucide-react';
+
+// Set up PDF.js worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 interface PDFViewerProps {
-  name: string;
-  url: string;
+  pdfPath: string;
+  title?: string;
+  className?: string;
 }
 
-const PDFViewer: React.FC<PDFViewerProps> = ({ name, url }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const PDFViewer: React.FC<PDFViewerProps> = ({
+  pdfPath,
+  title = "PDF Document",
+  className = ""
+}) => {
+  const [numPages, setNumPages] = useState<number>(0);
+  const [pageNumber, setPageNumber] = useState<number>(1);
+  const [scale, setScale] = useState<number>(1.0);
+  const [rotation, setRotation] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleDirectOpen = () => {
-    // Try to open in new tab first
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-    if (!newWindow) {
-      // If popup blocked, fall back to download
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = name;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    setNumPages(numPages);
+    setIsLoading(false);
+    setError(null);
   };
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = name;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const onDocumentLoadError = (error: Error) => {
+    console.error('Error loading PDF:', error);
+    setError('Failed to load PDF');
+    setIsLoading(false);
   };
+
+  const goToPrevPage = () => {
+    setPageNumber(Math.max(1, pageNumber - 1));
+  };
+
+  const goToNextPage = () => {
+    setPageNumber(Math.min(numPages, pageNumber + 1));
+  };
+
+  const zoomIn = () => {
+    setScale(Math.min(3.0, scale + 0.25));
+  };
+
+  const zoomOut = () => {
+    setScale(Math.max(0.5, scale - 0.25));
+  };
+
+  const rotate = () => {
+    setRotation((rotation + 90) % 360);
+  };
+
+  if (error) {
+    return (
+      <div className={`flex items-center justify-center p-8 border border-red-200 rounded-lg bg-red-50 ${className}`}>
+        <div className="text-center">
+          <p className="text-red-600 text-lg font-medium mb-2">Failed to load PDF</p>
+          <p className="text-red-500 text-sm">{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="flex items-center justify-between p-4 border hover:bg-accent transition-colors">
-      <div className="flex items-center space-x-3">
-        <FileText className="h-5 w-5 text-muted-foreground" />
-        <span className="font-medium">{name}</span>
-      </div>
-      
-      <div className="flex items-center space-x-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={handleDirectOpen}
-          className="flex items-center space-x-1"
-        >
-          <ExternalLink className="h-4 w-4" />
-          <span>Open</span>
-        </Button>
-        
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={handleDownload}
-          className="flex items-center space-x-1"
-        >
-          <Download className="h-4 w-4" />
-          <span>Download</span>
-        </Button>
-
-        <Dialog open={isOpen} onOpenChange={setIsOpen}>
-          <DialogTrigger asChild>
-            <Button variant="outline" size="sm">
-              Preview
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
-            <DialogHeader>
-              <DialogTitle>{name}</DialogTitle>
-            </DialogHeader>
-            <div className="flex-1 overflow-hidden">
-              <iframe
-                src={`${url}#toolbar=1&navpanes=1&scrollbar=1`}
-                className="w-full h-[70vh] border rounded"
-                title={name}
-                onError={() => {
-                  // Fallback if iframe fails
-                  const iframe = document.querySelector('iframe');
-                  if (iframe) {
-                    iframe.style.display = 'none';
-                    const fallback = document.createElement('div');
-                    fallback.className = 'flex flex-col items-center justify-center h-full text-center p-4';
-                    fallback.innerHTML = `
-                      <FileText className="h-16 w-16 text-muted-foreground mb-4" />
-                      <p className="text-lg font-medium mb-2">PDF Preview Not Available</p>
-                      <p className="text-muted-foreground mb-4">Your browser cannot display this PDF inline.</p>
-                      <div class="flex space-x-2">
-                        <button onclick="window.open('${url}', '_blank')" class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90">
-                          Open in New Tab
-                        </button>
-                        <button onclick="const link = document.createElement('a'); link.href = '${url}'; link.download = '${name}'; document.body.appendChild(link); link.click(); document.body.removeChild(link);" class="px-4 py-2 border rounded hover:bg-accent">
-                          Download
-                        </button>
-                      </div>
-                    `;
-                    iframe.parentNode?.appendChild(fallback);
-                  }
-                }}
-              />
+    <div className={`bg-white rounded-lg shadow-lg overflow-hidden ${className}`}>
+      {/* Header with controls */}
+      <div className="bg-gray-50 border-b border-gray-200 p-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-900 truncate">{title}</h3>
+          
+          <div className="flex items-center gap-2">
+            {/* Navigation */}
+            <div className="flex items-center gap-1">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={goToPrevPage}
+                disabled={pageNumber <= 1}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <span className="text-sm text-gray-600 px-2">
+                {pageNumber} / {numPages}
+              </span>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={goToNextPage}
+                disabled={pageNumber >= numPages}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
             </div>
-          </DialogContent>
-        </Dialog>
+
+            {/* Zoom and rotation controls */}
+            <div className="flex items-center gap-1 ml-4">
+              <Button size="sm" variant="outline" onClick={zoomOut}>
+                <ZoomOut className="h-4 w-4" />
+              </Button>
+              <span className="text-sm text-gray-600 px-2 min-w-[3rem] text-center">
+                {Math.round(scale * 100)}%
+              </span>
+              <Button size="sm" variant="outline" onClick={zoomIn}>
+                <ZoomIn className="h-4 w-4" />
+              </Button>
+              <Button size="sm" variant="outline" onClick={rotate}>
+                <RotateCw className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* PDF Content */}
+      <div className="p-4 bg-gray-100 overflow-auto max-h-[80vh]">
+        {isLoading && (
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+              <p className="text-sm text-gray-600">Loading PDF...</p>
+            </div>
+          </div>
+        )}
+        
+        {!isLoading && (
+          <div className="flex justify-center">
+            <Document
+              file={pdfPath}
+              onLoadSuccess={onDocumentLoadSuccess}
+              onLoadError={onDocumentLoadError}
+              loading=""
+            >
+              <Page
+                pageNumber={pageNumber}
+                scale={scale}
+                rotate={rotation}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+                className="shadow-lg"
+              />
+            </Document>
+          </div>
+        )}
       </div>
     </div>
   );

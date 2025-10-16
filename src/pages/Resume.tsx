@@ -22,15 +22,14 @@ const Resume = () => {
             </p>
           </div>
 
-          {/* PDF Viewer */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-primary/10">
-            <div className="w-full" style={{ height: '80vh' }}>
-              <iframe
-                src={`${import.meta.env.BASE_URL}CV.pdf`}
-                className="w-full h-full"
-                title="Resume PDF"
-              />
-            </div>
+          {/* Inline PDF (iframe) for maximum compatibility */}
+          <div className="bg-white rounded-lg shadow overflow-hidden">
+            <iframe
+              src={`${import.meta.env.BASE_URL}CV.pdf`}
+              title="Alexandre Sanmartin Goyanes - Resume"
+              className="w-full"
+              style={{ height: "80vh" }}
+            />
           </div>
 
           {/* Download Button */}

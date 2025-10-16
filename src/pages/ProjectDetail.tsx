@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import PDFViewer from "@/components/PDFViewer";
+import PDFDownloadButton from "@/components/PDFDownloadButton";
 import FloatingActions from "@/components/FloatingActions";
 import kartFrame from "@/assets/kart-frame.png";
 import { useEffect } from "react";
@@ -48,7 +48,7 @@ const ProjectDetail = () => {
       ],
       skills: ["SolidWorks / NX", "Maple", "System Design", "Tolerance Analysis", "DFM", "Product Implementation"],
       detailedInfo: "Task (University Workshop): Develop a next-generation modular powertrain for a Fendt tractor, including combustion and hybrid variants. Analyze the previous system, define objectives, and design key subsystems (gearbox, hybrid module, PTO, clutches, and chassis) with focus on manufacturability, efficiency, and modular integration.",
-      images: [],
+      images: [`${import.meta.env.BASE_URL}images/gearbox-drawing-1.jpg`],
       documents: [
         { name: "Task 1", url: `${import.meta.env.BASE_URL}Workshop_Task_MD3_WS_23_24.pdf` },
         { name: "Task 2", url: `${import.meta.env.BASE_URL}Workshopaufgabe_MKL4_SS24_EN_V1.pdf` },
@@ -93,7 +93,8 @@ const ProjectDetail = () => {
       ],
       skills: ["Academic Research", "Material Science", "Aerospace Industry"],
       detailedInfo: "Research project done with the IAM Institute of KIT",
-      images: [],
+      images: [`${import.meta.env.BASE_URL}images/research-niobium.jpg`],
+      imageDescriptions: ["Alexander Kauffmann, IAM-WK KIT Karlsruhe"],
       documents: [
         { name: "Research Paper", url: `${import.meta.env.BASE_URL}Research_Paper.pdf` },
         { name: "Research Question", url: `${import.meta.env.BASE_URL}Research_Question.pdf` }
@@ -164,8 +165,8 @@ const ProjectDetail = () => {
           Back to Projects
         </Button>
 
-        <div className="grid lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-3 space-y-8">
+        <div className="grid lg:grid-cols-4 gap-8">
+          <div className="lg:col-span-4 space-y-8">
             <div>
               <Badge className="mb-2">{project.category}</Badge>
               <p className="text-sm text-muted-foreground">{project.duration}</p>
@@ -216,6 +217,23 @@ const ProjectDetail = () => {
                 </p>
               </>
             )}
+            {/* Inline images integrated within the text content */}
+            {project.images.length > 0 && (
+              <div className="space-y-4 pt-2">
+                {project.images.map((image, idx) => (
+                  <img
+                    key={idx}
+                    src={image}
+                    alt={project.title}
+                    className="rounded-lg border-2 border-primary shadow-sm w-full h-auto"
+                    onError={(e) => {
+                      console.error('Image failed to load:', image);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                ))}
+              </div>
+            )}
             </div>
 
             {project.documents.length > 0 && (
@@ -223,7 +241,7 @@ const ProjectDetail = () => {
               <h2 className="text-2xl font-semibold">Documents & Resources</h2>
               <div className="space-y-2">
                 {project.documents.map((doc, idx) => (
-                  <PDFViewer
+                  <PDFDownloadButton
                     key={idx}
                     name={doc.name}
                     url={doc.url}
@@ -234,26 +252,7 @@ const ProjectDetail = () => {
             )}
           </div>
 
-          {project.images.length > 0 && (
-            <div className="lg:col-span-2">
-              <div className="sticky top-8 space-y-4 flex flex-col items-start justify-center px-6">
-                {project.images.map((image, idx) => (
-                  <div key={idx} className="space-y-2 w-full flex flex-col items-start">
-                    <img
-                      src={image}
-                      alt={`${project.title} - Image ${idx + 1}`}
-                      className="rounded-lg border shadow-sm max-w-lg"
-                    />
-                    {project.imageDescriptions && project.imageDescriptions[idx] && (
-                      <p className="text-sm text-muted-foreground italic">
-                        {project.imageDescriptions[idx]}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* Right column intentionally left empty; image is integrated above */}
         </div>
       </div>
       

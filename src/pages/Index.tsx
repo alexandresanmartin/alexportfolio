@@ -5,12 +5,16 @@ import Contact from "@/components/Contact";
 import FloatingActions from "@/components/FloatingActions";
 
 const Index = () => {
+  
+
   return (
     <div className="min-h-screen pt-16">
       {/* Top half - White background */}
       <div className="bg-white min-h-[50vh] relative">
         <Hero />
       </div>
+      
+      
       
       {/* Bottom half - Blue background */}
       <div className="bg-primary relative">
