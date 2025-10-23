@@ -71,7 +71,7 @@ const Projects = () => {
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            A selection of engineering projects demonstrating problem-solving abilities and technical expertise
+            A selection of engineering projects demonstrating problem-solving abilities and applied technical knowledge
           </p>
         </div>
 
