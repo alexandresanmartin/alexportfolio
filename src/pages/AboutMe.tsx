@@ -17,7 +17,7 @@ const AboutMe = () => {
           <div className="flex justify-center">
             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg">
               <img 
-                src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
+                src={`${import.meta.env.BASE_URL}profile-picture.jpg?v=2`}
                 alt="Alexandre Sanmartin Goyanes"
                 className="w-full h-full object-cover"
                 onError={(e) => {

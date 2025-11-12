@@ -34,7 +34,7 @@ const Hero = () => {
                 <button className="group relative">
                   <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg hover:border-primary/60 transition-all hover:scale-105 cursor-pointer">
                     <img 
-                      src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
+                      src={`${import.meta.env.BASE_URL}profile-picture.jpg?v=2`}
                       alt="Alexandre Sanmartin Goyanes"
                       className="w-full h-full object-cover"
                       onError={(e) => {
@@ -48,7 +48,7 @@ const Hero = () => {
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <img 
-                  src={`${import.meta.env.BASE_URL}profile-picture.jpg`}
+                  src={`${import.meta.env.BASE_URL}profile-picture.jpg?v=2`}
                   alt="Alexandre Sanmartin Goyanes"
                   className="w-full h-auto rounded-lg"
                   onError={(e) => {
