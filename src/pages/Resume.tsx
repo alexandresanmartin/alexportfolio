@@ -25,7 +25,7 @@ const Resume = () => {
           {/* Inline PDF (iframe) for maximum compatibility */}
           <div className="bg-white rounded-lg shadow overflow-hidden">
             <iframe
-              src={`${import.meta.env.BASE_URL}CV.pdf?v=3`}
+              src={`${import.meta.env.BASE_URL}CV4.pdf?v=3`}
               title="Alexandre Sanmartin Goyanes - Resume"
               className="w-full"
               style={{ height: "80vh" }}
