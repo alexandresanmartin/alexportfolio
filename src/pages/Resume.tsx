@@ -5,7 +5,7 @@ import FloatingActions from "@/components/FloatingActions";
 const Resume = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}CV4.pdf?v=3`;
+    link.href = `${import.meta.env.BASE_URL}Alexandre Sanmartin.pdf?v=4`;
     link.download = 'Alexandre_Sanmartin_CV.pdf';
     link.click();
   };
@@ -25,7 +25,7 @@ const Resume = () => {
           {/* Inline PDF (iframe) for maximum compatibility */}
           <div className="bg-white rounded-lg shadow overflow-hidden">
             <iframe
-              src={`${import.meta.env.BASE_URL}CV4.pdf?v=3`}
+              src={`${import.meta.env.BASE_URL}Alexandre Sanmartin.pdf?v=4`}
               title="Alexandre Sanmartin Goyanes - Resume"
               className="w-full"
               style={{ height: "80vh" }}
