@@ -5,7 +5,7 @@ import FloatingActions from "@/components/FloatingActions";
 const Resume = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}CV.pdf?v=3`;
+    link.href = `${import.meta.env.BASE_URL}CV4.pdf?v=3`;
     link.download = 'Alexandre_Sanmartin_CV.pdf';
     link.click();
   };
