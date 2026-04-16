@@ -130,11 +130,11 @@ const ProjectDetail = () => {
       detailedInfo: "Farmers in Malawi face a tight, weather-dependent window to plant their crops. To address this, we engineered a precision seeder specifically tailored to the local terrain and the needs of the people using it. Navigating strict constraints around budget, available resources, and deadlines, I designed a sustainable, highly repairable solution. The final product empowers farmers to reliably and affordably control seed placement and fertilization, providing a critical tool exactly when they need it most.",
       images: [],
       documents: [
-        { name: "Part 1", url: `${import.meta.env.BASE_URL}Hand-in_1.pdf` },
-        { name: "Part 2", url: `${import.meta.env.BASE_URL}PDED_-_Hand-in_2_-_group_7.pdf` },
-        { name: "Mid-Project Presentation", url: `${import.meta.env.BASE_URL}PDED_-_midterm_presentation_-_group_7.pdf` },
-        { name: "User Input", url: `${import.meta.env.BASE_URL}User_Interview_Summary.pdf` },
-        { name: "Needs Matrix", url: `${import.meta.env.BASE_URL}Metrix-Needs_Matrix.xlsx` }
+        { name: "Part 1", url: `${import.meta.env.BASE_URL}Hand-in 1.pdf` },
+        { name: "Part 2", url: `${import.meta.env.BASE_URL}PDED - Hand-in 2 - group 7.pdf` },
+        { name: "Mid-Project Presentation", url: `${import.meta.env.BASE_URL}PDED - midterm_presentation - group 7.pdf` },
+        { name: "User Input", url: `${import.meta.env.BASE_URL}User Interview Summary.pdf` },
+        { name: "Needs Matrix", url: `${import.meta.env.BASE_URL}Metrix-Needs Matrix.xlsx` }
       ]
     },
     "modular-drone": {
