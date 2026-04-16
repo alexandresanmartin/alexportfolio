@@ -13,7 +13,6 @@ const ProjectDetail = () => {
 
   const handleBackToProjects = () => {
     navigate('/');
-    // Small delay to ensure page loads before scrolling
     setTimeout(() => {
       const projectsSection = document.getElementById('projects');
       if (projectsSection) {
@@ -22,7 +21,6 @@ const ProjectDetail = () => {
     }, 100);
   };
 
-  // Project data with detailed information
   const projectsData: Record<string, {
     title: string;
     category: string;
@@ -80,7 +78,7 @@ const ProjectDetail = () => {
       images: [],
       documents: []
     },
-    "hvac-system": {
+    "materials-research": {
       title: "Research Paper in Niobium Based Alloys",
       category: "Research",
       duration: "4 Months",
@@ -98,6 +96,45 @@ const ProjectDetail = () => {
       documents: [
         { name: "Research Paper", url: `${import.meta.env.BASE_URL}Research_Paper.pdf` },
         { name: "Research Question", url: `${import.meta.env.BASE_URL}Research_Question.pdf` }
+      ]
+    },
+    "injection-molding-algorithm": {
+      title: "Manufacturing Algorithm for Injection Molding",
+      category: "Mechanical Design & Production",
+      duration: "3 Months (Mar 2026 – May 2026)",
+      organization: "ETH Zürich — Product Development Zone (PDZ)",
+      description: [
+        "Conducted literature research on state-of-the-art design techniques for injection molding manufacturability",
+        "Developed a constraint-checking algorithm to automate and enforce design-for-manufacturing rules",
+        "Automated and optimized the end-to-end design validation process for injection molding",
+        "Implemented the algorithm in Rhino/Grasshopper, enabling parametric and scalable design evaluation",
+        "Integrated multi-constraint checking logic to ensure high-quality control across design iterations"
+      ],
+      skills: ["DFM", "Python", "SolidWorks", "Rhino", "Grasshopper", "AI Tools", "Academic Research"],
+      detailedInfo: "For my semester thesis with the PDZ, I developed an automated constraint-checking algorithm to bridge the gap between part designers and manufacturers. By instantly evaluating critical constraints — specifically undercuts, draft angles, and corner radii — the tool streamlines the design validation process. This automation prevents costly, time-consuming iterations, ensuring parts are optimized for injection molding right from the start and making the entire production cycle faster and cheaper.",
+      images: [],
+      documents: []
+    },
+    "precision-seeder": {
+      title: "Precision Seeder — Integral Development and Manufacturing",
+      category: "Product Development & Engineering Design",
+      duration: "4 Months (Feb 2026 – May 2026)",
+      organization: "ETH Zürich / Engineering Design and Computing Laboratory",
+      description: [
+        "Designed a precision seeder from scratch specifically aimed at supporting smallholder farmers in Malawi",
+        "Conducted public surveying to accurately capture and integrate core user needs and constraints",
+        "Successfully navigated tight project constraints across budget, time, resource availability, and usability requirements",
+        "Engineered the final product using sustainable materials with a strong focus on modularity and ease of repair"
+      ],
+      skills: ["CAD", "Product Development", "User Needs Integration", "Creativity", "Decision Making", "Iterative Design", "Fast Prototyping"],
+      detailedInfo: "Farmers in Malawi face a tight, weather-dependent window to plant their crops. To address this, we engineered a precision seeder specifically tailored to the local terrain and the needs of the people using it. Navigating strict constraints around budget, available resources, and deadlines, I designed a sustainable, highly repairable solution. The final product empowers farmers to reliably and affordably control seed placement and fertilization, providing a critical tool exactly when they need it most.",
+      images: [],
+      documents: [
+        { name: "Part 1", url: `${import.meta.env.BASE_URL}Hand-in_1.pdf` },
+        { name: "Part 2", url: `${import.meta.env.BASE_URL}PDED_-_Hand-in_2_-_group_7.pdf` },
+        { name: "Mid-Project Presentation", url: `${import.meta.env.BASE_URL}PDED_-_midterm_presentation_-_group_7.pdf` },
+        { name: "User Input", url: `${import.meta.env.BASE_URL}User_Interview_Summary.pdf` },
+        { name: "Needs Matrix", url: `${import.meta.env.BASE_URL}Metrix-Needs_Matrix.xlsx` }
       ]
     },
     "modular-drone": {
@@ -133,7 +170,6 @@ const ProjectDetail = () => {
 
   const project = projectId ? projectsData[projectId] : null;
 
-  // Scroll to top when component mounts or projectId changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [projectId]);
@@ -150,8 +186,6 @@ const ProjectDetail = () => {
             </Button>
           </Link>
         </div>
-        
-        {/* Floating action buttons */}
         <FloatingActions />
       </div>
     );
@@ -203,60 +237,59 @@ const ProjectDetail = () => {
 
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Detailed Information</h2>
-              <p className="text-lg text-muted-foreground">{project.detailedInfo}</p>
-            {projectId === "fendt-vario" && (
-              <p className="text-lg text-muted-foreground italic">Different Original concept sketches exist only as physical copies and have not yet been converted to digital format.</p>
-            )}
-            {projectId === "hydrogen-car" && (
-              <>
-                <p className="text-lg text-muted-foreground">More Information on Demand. Not publicly available due to Privacy Agreements.</p>
-                <p className="text-lg text-muted-foreground">
-                  <a href="https://www.ka-raceing.de/hydrogen" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    https://www.ka-raceing.de/hydrogen
-                  </a>
-                </p>
-              </>
-            )}
-            {/* Inline images integrated within the text content */}
-            {project.images.length > 0 && (
-              <div className="space-y-4 pt-2">
-                {project.images.map((image, idx) => (
-                  <img
-                    key={idx}
-                    src={image}
-                    alt={project.title}
-                    className="rounded-lg border-2 border-primary shadow-sm w-full h-auto"
-                    onError={(e) => {
-                      console.error('Image failed to load:', image);
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                ))}
-              </div>
-            )}
+              <p className="text-lg text-muted-foreground whitespace-pre-line">{project.detailedInfo}</p>
+              {projectId === "fendt-vario" && (
+                <p className="text-lg text-muted-foreground italic">Different original concept sketches exist only as physical copies and have not yet been converted to digital format.</p>
+              )}
+              {projectId === "hydrogen-car" && (
+                <>
+                  <p className="text-lg text-muted-foreground">More information available on demand. Not publicly available due to privacy agreements.</p>
+                  <p className="text-lg text-muted-foreground">
+                    <a href="https://www.ka-raceing.de/hydrogen" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      https://www.ka-raceing.de/hydrogen
+                    </a>
+                  </p>
+                </>
+              )}
+              {project.images.length > 0 && (
+                <div className="space-y-4 pt-2">
+                  {project.images.map((image, idx) => (
+                    <div key={idx}>
+                      <img
+                        src={image}
+                        alt={project.title}
+                        className="rounded-lg border-2 border-primary shadow-sm w-full h-auto"
+                        onError={(e) => {
+                          console.error('Image failed to load:', image);
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                      {project.imageDescriptions?.[idx] && (
+                        <p className="text-sm text-muted-foreground mt-2 italic">{project.imageDescriptions[idx]}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {project.documents.length > 0 && (
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Documents & Resources</h2>
-              <div className="space-y-2">
-                {project.documents.map((doc, idx) => (
-                  <PDFDownloadButton
-                    key={idx}
-                    name={doc.name}
-                    url={doc.url}
-                  />
-                ))}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold">Documents & Resources</h2>
+                <div className="space-y-2">
+                  {project.documents.map((doc, idx) => (
+                    <PDFDownloadButton
+                      key={idx}
+                      name={doc.name}
+                      url={doc.url}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
             )}
           </div>
-
-          {/* Right column intentionally left empty; image is integrated above */}
         </div>
       </div>
-      
-      {/* Floating action buttons */}
       <FloatingActions />
     </div>
   );
