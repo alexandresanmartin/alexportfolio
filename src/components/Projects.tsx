@@ -33,7 +33,7 @@ const Projects = () => {
       organization: "KA RaceIng Formula Student Team"
     },
     {
-      id: "hvac-system",
+      id: "materials-research",
       title: "Research Paper in Niobium Based Alloys",
       description: [
         "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
