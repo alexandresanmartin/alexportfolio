@@ -116,7 +116,7 @@ const ProjectDetail = () => {
       documents: []
     },
     "precision-seeder": {
-      title: "Precision Seeder — Integral Development and Manufacturing",
+      title: "Precision Seeder - Integral Development and Manufacturing",
       category: "Product Development & Engineering Design",
       duration: "4 Months (Feb 2026 – May 2026)",
       organization: "ETH Zürich / Engineering Design and Computing Laboratory",
