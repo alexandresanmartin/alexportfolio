@@ -59,7 +59,7 @@ const Projects = () => {
       skills: ["DFM", "Python", "SolidWorks", "Rhino", "Grasshopper", "AI Tools", "Academic Research"],
       category: "Mechanical Design & Production",
       duration: "3 Months (Mar 2026 – May 2026)",
-      organization: "ETH Zürich"
+      organization: "ETH Zürich / Product Development Zurich Institute"
     },
     {
       id: "precision-seeder",
