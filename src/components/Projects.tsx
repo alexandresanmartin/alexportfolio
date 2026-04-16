@@ -33,7 +33,7 @@ const Projects = () => {
       organization: "KA RaceIng Formula Student Team"
     },
     {
-      id: "materials-research",
+      id: "hvac-system",
       title: "Research Paper in Niobium Based Alloys",
       description: [
         "Researched the limitations of niobium alloys in high-temperature aerospace use, focusing on catastrophic oxidation",
@@ -50,10 +50,10 @@ const Projects = () => {
       id: "injection-molding-algorithm",
       title: "Manufacturing Algorithm for Injection Molding",
       description: [
-        "Conducted literature research on state-of-the-art design techniques for injection molding manufacturability",
-        "Developed a constraint-checking algorithm to automate and enforce design-for-manufacturing rules",
+        "Conducted literature research on state-of-the-art design automation techniques for IM",
+        "Developed a constraint-checking algorithm to automate and enforce DFM rules",
         "Automated and optimized the end-to-end design validation process for injection molding",
-        "Implemented the algorithm in Rhino/Grasshopper, enabling parametric and scalable design evaluation",
+        "Implemented in Rhino/Grasshopper, enabled parametric and scalable design evaluation",
         "Integrated multi-constraint checking logic to ensure high-quality control across design iterations"
       ],
       skills: ["DFM", "Python", "SolidWorks", "Rhino", "Grasshopper", "AI Tools", "Academic Research"],
@@ -63,12 +63,13 @@ const Projects = () => {
     },
     {
       id: "precision-seeder",
-      title: "Precision Seeder — Integral Development and Manufacturing",
+      title: "Precision Seeder - Integral Development and Manufacturing",
       description: [
-        "Designed a precision seeder from scratch specifically aimed at supporting smallholder farmers in Malawi",
+       "Designed a precision seeder from scratch",
+        "Aimed at supporting smallholder farmers in Malawi",
         "Conducted public surveying to accurately capture and integrate core user needs and constraints",
-        "Successfully navigated tight project constraints across budget, time, resource availability, and usability requirements",
-        "Engineered the final product using sustainable materials with a strong focus on modularity and ease of repair"
+        "Successfully navigated tight project constraints",
+        "Engineered the final product using sustainable materials with ease of repair"
       ],
       skills: ["CAD", "Product Development", "User Needs Integration", "Creativity", "Decision Making", "Iterative Design", "Fast Prototyping"],
       category: "Product Development & Engineering Design",
